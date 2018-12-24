@@ -1,0 +1,244 @@
+@charset "utf-8";
+/* CSS Document */
+body{margin:0;padding:0; font:12px Arial, "microsoft yahei"; color:#333; background:#eee;}
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0; }
+
+ul,li,ol{list-style:none;}
+
+a{text-decoration:none; color:#333;}
+a:hover{text-decoration:none; color:#deb97b;}
+.clear{clear:both;}
+img{border:0}
+
+.l{ float:left;}
+.r{ float:right;}
+
+input,textarea,select{  font-family:"Microsoft YaHei"; font-size:12px;}
+input:focus,textarea:focus,select:focus{ outline:none;}
+
+
+/* header */
+.header{ width:100%; height:50px; background:#000; position:relative;}
+.header_logo{ margin-left:12px; height:26px; padding:12px 0;}
+.header_nav a{position: absolute;z-index:99; right:0; border:none; background:url(../images/icon_open.png) 10px 10px no-repeat; width:50px; height:50px; display:block; cursor:pointer; outline:none;}
+.header_nav a.active{position: fixed;  background:rgba(0, 0, 0, 0.9) url(../images/icon_close.png) 10px 10px no-repeat; margin-right:120px; border:none; outline:none; -webkit-transition: all 0.3s ease;-moz-transition: all 0.3s ease;transition: all 0.3s ease;}
+
+.cbp-spmenu{background:rgba(0, 0, 0, 0.9); position: fixed;z-index:9999;}
+.cbp-spmenu h3{color:#deb97b; font-size:16px; line-height:50px; height:50px; margin:0; font-weight:bold; background:rgba(0, 0, 0, 0.2); padding-left:16px;}
+.cbp-spmenu-right{right: -120px; width:120px; height:100%; top:0; z-index:1000;}
+.cbp-spmenu-right.cbp-spmenu-open{right:0px;}
+.cbp-spmenu,.cbp-spmenu-push{-webkit-transition: all 0.3s ease;-moz-transition: all 0.3s ease;transition: all 0.3s ease;}
+
+.subNavBox{width:100%; border-top:solid 1px #333; margin:0 auto;}
+.subNav{border-bottom:solid 1px #333; cursor:pointer; font-weight:bold; line-height:50px; padding-left:16px;}
+.subNav a{ font-size:14px; color:#deb97b; display:block;}
+.subNav:hover{color:#fff; background:#deb97b; border-bottom:solid 1px #deb97b;}
+/*.navContent{display: none; border-bottom:solid 1px #333;}
+.navContent li a{display:block; width:100%; heighr:40px; background:#444; padding-left:30px; font-size:14px; line-height:40px; color:#999; border-bottom:solid 1px #555;}
+.navContent li a:hover{color:#fff; background:#c4141f;}*/
+
+
+
+/* banner */
+.banner{position:relative; overflow:hidden; margin:0 auto 0;}
+.banner .hd{ position: absolute; bottom:8px; text-align: center; width: 100%;}
+.banner .hd li{display: inline-block; width:8px; height:8px; margin: 0 4px; background: #fff; filter: alpha(Opacity=60); opacity: .6; text-indent:-100px; border-radius:4px; overflow:hidden; }
+.banner .hd li.on{ filter: alpha(Opacity=100); opacity: .9; background: #deb97b; width:20px; height:8px;}
+.banner .bd{position:relative; z-index:0;}
+.banner .bd li{position:relative; text-align:center;}
+.banner .bd li img{background:url(../images/loading.gif) center center no-repeat;  vertical-align:top; width:100%;}
+.banner .bd li a{-webkit-tap-highlight-color:rgba(0,0,0,0);}
+
+
+
+/* about */
+.about {width:100%; overflow:hidden; margin:8px auto 0;  background:#fff;}
+.about .top {height:46px; width:96%; padding:0 2%; line-height:46px; font-size:16px; background:#fff;  text-transform:uppercase; border-bottom:solid 2px #eee;}
+.about .top em{width:3px; height:16px; background:#deb97b; margin:15px 10px 15px 0; float:left;}
+.about .top span{ float:right; margin-right:0;}
+.about .top span a{ font-size:12px; padding:4px; border:1px solid #eee; display:block; line-height:16px; margin:10px 0; border-radius:3px; color:#aaa;}
+.about .cont{ width:96%; padding:2%; font-size:14px; line-height:22px; color:#333;}
+.about .cont img{ max-width:100%; margin:10px 0;}
+
+
+
+/* news */
+.news {width:100%; overflow:hidden; margin:8px auto 0;  background:#fff;}
+.news .top {height:46px; width:96%; padding:0 2%; line-height:46px; font-size:16px; background:#fff;  text-transform:uppercase;}
+.news .top em{width:3px; height:16px; background:#deb97b; margin:15px 10px 15px 0; float:left;}
+.news .top span{ float:right; margin-right:0;}
+.news .top span a{ font-size:12px; padding:4px; border:1px solid #eee; display:block; line-height:16px; margin:10px 0; border-radius:3px; color:#aaa;}
+
+.newsList{ width:100%; overflow:hidden; margin:0 auto; background:#fff;}
+.newsList .hd{ height:40px; line-height:40px; font-size:12px; overflow:hidden; width:100%; padding:0;  background:#fff;}
+.newsList .hd li{ float:left; padding:0; height:38px; vertical-align:top; width:50%; text-align:center;border-bottom:solid 1px #eee;border-top:solid 1px #eee;}
+.newsList .hd li.on a{ color:#333; background:#deb97b; display:block; border-color:#deb97b;}
+.newsList .bd{ background:#fff;}
+.newsList .bd ul{ width:100%; margin:auto; }
+.newsList .bd ul li{ float:left; width:96%; padding: 2%; border-bottom: solid 1px #eee; }
+.newsList .bd ul li .Img{ width:27%; overflow:hidden; position:relative;}
+.newsList .bd ul li .Img img{ width:100%;}
+.newsList .bd ul li .Cont{ width:70%;}
+.newsList .bd ul li .title{ float:left; width:100%; font-size:14px; color:#333; margin-top:5px;}
+.newsList .bd ul li .time{ float:left; width:100%; font-size:10px; color:#999; margin:2px 0;}
+.newsList .bd ul li .con{ float:left; width:100%; font-size:10px; color:#666; line-height:20px; margin-top:5px;}
+
+
+
+/* product */
+.product {width:100%; overflow:hidden; margin:8px auto 0; padding-bottom:4px;  background:#fff;}
+.product .top {height:46px; width:96%; padding:0 2%; line-height:46px; font-size:16px; background:#fff;  text-transform:uppercase; border-bottom:solid 2px #eee;}
+.product .top em{width:3px; height:16px; background:#deb97b; margin:15px 10px 15px 0; float:left;}
+.product .top span{ float:right; margin-right:0;}
+.product .top span a{ font-size:12px; padding:4px; border:1px solid #eee; display:block; line-height:16px; margin:10px 0; border-radius:3px; color:#aaa;}
+.product ul{ width:98%; padding:1%;}
+.product ul li{ float: left; width:48%; margin:1%; position:relative;}
+.product ul li .img{ width:100%; position:relative; z-index:1;}
+.product ul li .img img{ width:100%;}
+.product ul li .title{ width:100%; height:40px; position:absolute; z-index:2; bottom:0; left:0; font-size:14px; color:#deb97b; line-height:40px; text-align:center; background:rgba(0, 0, 0, 0.4);}
+.product ul li:hover .title{ background:rgba(222, 185, 123, 0.9); color:#000;}
+
+
+
+
+/* problem */
+.problem {width:100%; overflow:hidden; margin:8px auto 0;  background:#fff;}
+.problem .top {height:46px; width:96%; padding:0 2%; line-height:46px; font-size:16px; background:#fff;  text-transform:uppercase; border-bottom:solid 2px #eee;}
+.problem .top em{width:3px; height:16px; background:#deb97b; margin:15px 10px 15px 0; float:left;}
+.problem .top span{ float:right; margin-right:0;}
+.problem .top span a{ font-size:12px; padding:4px; border:1px solid #eee; display:block; line-height:16px; margin:10px 0; border-radius:3px; color:#aaa;}
+
+.problem ul{ width:100%; margin:auto; }
+.problem ul li{ float:left; width:96%; padding: 2%; border-bottom: solid 1px #eee; }
+.problem ul li .Img{ width:27%; overflow:hidden; position:relative;}
+.problem ul li .Img img{ width:100%;}
+.problem ul li .Cont{ width:70%;}
+.problem ul li .title{ float:left; width:100%; font-size:14px; color:#333; margin-top:5px;}
+.problem ul li .time{ float:left; width:100%; font-size:10px; color:#999; margin:2px 0;}
+.problem ul li .con{ float:left; width:100%; font-size:10px; color:#666; line-height:20px; margin-top:5px;}
+
+
+/* fillinCon */
+.fillinCon{ background:#fff; padding:8px; margin-top:8px; padding-top:0;}
+.fillinCon .rowTitle{ font-size:14px; color:#333; float:left; margin:20px 0 8px; width:100%;}
+.fillinCon .rowTitle p{ height:16px; line-height:16px; font-size:14px;}
+.fillinCon .rowTitle span{ color:#deb97b; font-weight:bold; font-size:16px; margin-left:4px;}
+.fillinCon .rowTitle i{ width:3px; height:16px; background:#deb97b; margin-right:7px; float:left;}
+.fillinCon .rowInput{float:left; display:block; width:100%; margin:5px 0;}
+.fillinCon .rowInput span{ color:#aaa; padding-right:10px;}
+.fillinCon .rowPro label{ width:100%; float:left; line-height:20px;}
+.fillinCon .rowPro input{ margin:0 0 0 0;}
+.fillinCon .rowPro i{ color:#deb97b; font-style:normal; font-weight:bold;}
+.fillinCon .rowPro select{ color:#aaa;}
+.fillinCon label{ position:relative; display:block; }
+.fillinCon label span{ position:absolute; left:0; top:12px; font-size:14px; color:#aaa; padding:0 0 0 10px;}
+.fillinCon .txt{ border:1px solid #ddd; padding:0 0 0 10px; background:#fff;}
+.fillinCon .txt:focus{ border:1px solid #deb97b; padding:0 0 0 10px; background:#fff;}
+.fillinCon .txt.w1{ width:96.5%; height:42px; line-height:16px; }
+.fillinCon .txt.w3{ width:96.5%; line-height:16px; height:100px; border:1px solid #ddd; padding:10px 0 0 10px; background:#fff;}
+.fillinCon .txt.w3:focus{ border:1px solid #deb97b; padding:10px 0 0 10px; background:#fff;}
+.fillinCon .btn{ float:right; width:100%; border:0px;cursor:pointer;  height:50px; line-height:50px; background:#deb97b; font-size:16px; margin-top:5px; color:#fff;}
+.fillinCon .btn:hover{background:#e61852;-webkit-transition: all 0.7s ease; -moz-transition: all 0.7s ease; -ms-transition: all 0.7s ease; -o-transition: all 0.7s ease; transition: all 0.7s ease;}
+
+
+
+
+
+/* tel */
+.tel{background:#fff; padding:16px 10px; margin:8px auto 0;}
+.tel_l p{ font-size:16px; font-weight:bold; line-height:18px; height:18px;}
+.tel_l span{ font-size:12px; color:#aaa; line-height:14px; height:14px;}
+.tel_r img{ height:24px; margin:4px 0;}
+
+
+
+/* footer */
+.footer{ line-height:20px; text-align:center; margin-bottom:46px; padding:12px; color:#aaa; font-size:12px;}
+.footer a{ color:#aaa; margin:0 3px;}
+.footer a:hover{ color:#deb97b;}
+.gotop {height:44px; width:44px; position: fixed; right:5px; bottom:60px; z-index:99;cursor: pointer;}
+
+
+
+/* footernav */
+.mui-bar{position:fixed; z-index:10; right:0; left:0; height:46px; bottom:0; display:table; width:100%; padding:0; table-layout:fixed;}
+.footernavtxt{ display: block; font-size: 12px; color:#deb97b; line-height:20px;}
+.footernavimg{ display: block; padding:6px 0 0;}
+.footernavimg img{ width: 20px; height: 20px; display: block; margin:auto;}
+.footernav{ background:rgba(0, 0, 0, 0.9); box-shadow: none; padding:3px 0;}
+.footernavli{ display: block; width: 25%; float: left; text-align: center;}
+
+
+/* page */
+.crumbs{ line-height:36px; height:36px; padding-left:8px; background:#fff; color:#999; margin-bottom:8px;}
+.crumbs span{ margin:0 5px;}
+
+.pages { font-size:14px; margin:20px 0; text-align:center;}
+.pages a { display:inline-block; height:28px; line-height:28px; background:#fff; border:1px solid #eee; text-align:center; color:#21282e; padding:0 10px; border-radius:3px; margin:0 3px;}
+.pages a:hover { background:#deb97b; color:#fff; text-decoration:none; border:1px solid #deb97b; }
+.pages span { display:inline-block; height:28px; line-height:28px; background:#deb97b; border:1px solid #deb97b; color:#fff; text-align:center; padding:0 10px; border-radius:3px; margin:0 3px;}
+.pageCont{ width:100%; background:#fff; position:relative; padding-bottom:1px;}
+.pageCont .cont{ font-size:14px; line-height:28px; padding:4%; width:92%; background:#fff;}
+.pageCont .cont img{max-width:100%; height:auto;}
+.pageCont .xuqiu{ width:110px; height:35px; background:#deb97b; text-align:center; line-height:35px; margin:0 auto 20px;}
+.pageCont .xuqiu a{ font-size:14px; color:#fff; font-weight:bold; display:block;}
+.pageCont .xuqiu:hover{background:#333;}
+
+.pageNav{ width:100%; margin:-7px auto 0; background:#fff; padding-bottom:2px; }
+.pageNav ul{ width:99%; margin:0 auto; padding:0.5%;}
+.pageNav li{ float:left; margin:0.5%; width:24%; padding:7px 0; background:#eee; text-align:center}
+.pageNav li a{ font-size:10px; color:#333; display:block;}
+.pageNav li:hover{ background:#deb97b;}
+.pageNav .on{ background:#deb97b;}
+
+
+
+/* pageAbout */
+.pageAbout{width:96%; padding:2%; margin:0 auto 0; background:#fff;}
+.pageAbout img{ max-width:100%;}
+
+.pageForm{width:96%; padding:4% 2%; margin:-6px auto; background:#fff; font-size:16px; color:#333; text-align:center; font-weight:bold;}
+.pageForm span{ color:#deb97b;}
+
+
+/* pageProduct */
+.pageProduct {width:100%; overflow:hidden; margin:8px auto 0; padding-bottom:4px;  background:#fff;}
+.pageProduct ul{ width:98%; padding:1%;}
+.pageProduct ul li{ float: left; width:48%; margin:1%; position:relative;}
+.pageProduct ul li .img{ width:100%; position:relative; z-index:1;}
+.pageProduct ul li .img img{ width:100%;}
+.pageProduct ul li .title{ width:100%; height:40px; position:absolute; z-index:2; bottom:0; left:0; font-size:14px; color:#deb97b; line-height:40px; text-align:center; background:rgba(0, 0, 0, 0.4);}
+.pageProduct ul li:hover .title{ background:rgba(222, 185, 123, 0.9); color:#000;}
+
+
+
+/*pageNews*/
+.pageNews{ width:100%; margin:8px auto 0; padding:5px 0 ; background:#fff;}
+.pageNews ul{ width:100%; margin:auto; }
+.pageNews ul li{ float:left; width:96%; padding: 2%; border-bottom: solid 1px #eee; }
+.pageNews ul li .Img{ width:27%; overflow:hidden; position:relative;}
+.pageNews ul li .Img img{ width:100%;}
+.pageNews ul li .Cont{ width:70%;}
+.pageNews ul li .title{ float:left; width:100%; font-size:14px; color:#333; margin-top:5px;}
+.pageNews ul li .time{ float:left; width:100%; font-size:10px; color:#999; margin:2px 0;}
+.pageNews ul li .con{ float:left; width:100%; font-size:10px; color:#666; line-height:20px; margin-top:5px;}
+
+
+
+.pageNewsDetail{ width:100%; overflow:hidden; margin:8px auto; background:#fff;}
+.pageNewsDetail .title{ width:96%; padding:2%; text-align:center; font-size:14px; font-weight: bold; line-height:24px;}
+.pageNewsDetail .time { font-size:12px; color:#ccc; line-height:24px; text-align:center; padding-bottom:10px; border-bottom:solid 1px #eee;}
+.pageNewsDetail .time span{ margin:0 5px;}
+.pageNewsDetail .cont{ font-size:14px; line-height:28px; padding:2%; width:96%;}
+.pageNewsDetail .cont img{ max-width:100%;}
+.pageNewsDetail .share{ line-height:14px; border-top:solid 1px #eee; border-bottom:solid 1px #eee; padding:12px 4%; width:92%; margin-top:20px;}
+.pageNewsDetail .paging{ padding:0; width:100%;}
+.pageNewsDetail .paging span{ width:50%; float:left; display: inline-block; text-align:center; line-height:40px; font-size:14px; font-weight:bold; background:#deb97b; color:#333;}
+.pageNewsDetail .paging span a{color:#333;}
+ 
+
+
+
+
+
+

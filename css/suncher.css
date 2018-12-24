@@ -1,0 +1,269 @@
+﻿@charset "utf-8";
+/* CSS Document */
+body{margin:0; padding:0; font:14px Arial,"microsoft yahei"; color:#333; background:#fff;}
+body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td{margin:0;padding:0; }
+ul,li,ol{list-style:none;}
+
+a{text-decoration:none; color:#333;}
+a:hover{text-decoration:none; color:#deb97b;}
+.clear{clear:both;}
+img{border:0}
+
+.l{ float:left;}
+.r{ float:right;}
+.c1200{width:1200px; margin:0 auto; min-width:1200px; position:relative;}
+@font-face{font-family: 'georgia';src : url('../fonts/georgia.ttf');}
+
+input,textarea,select,button{  font-family:Arial,"Microsoft YaHei";}
+input:focus,textarea:focus,select:focus,button:focus{ outline:none;}
+
+
+/* Header */
+.Header{ width:100%; height:160px; position:relative; margin:0; padding:0;}
+.Header .HeaderC{ width:100%; background:#000; height:100px;}
+.Header .HeaderC .HeaderLogo a{display:block; width:230px; height:60px; margin:20px 0; background:url(../images/logo.png) no-repeat; background-size:100% 100%;}
+.Header .HeaderC .HeaderTel{ height:60px; margin:20px 0; color:#deb97b; line-height:30px;}
+.Header .HeaderC .HeaderTel p{ font-size:16px; font-weight:bold;}
+.Header .HeaderC .HeaderTel span{ font-size:30px;}
+.Header .HeaderNav{ width:100%; background:#deb97b; height:58px; border-top:solid 1px #deb97b; border-bottom:solid 1px #deb97b;}
+.Header .HeaderNav ul{ width:1197px; margin:0 auto; position:relative;}
+.Header .HeaderNav li{ width:169px; margin:0 1px; height:58px; float:left; text-align:center; line-height:58px; font-size:16px;}
+.Header .HeaderNav li a{ display:block; color:#000;}
+.Header .HeaderNav li.on,.Header .HeaderNav li:hover{ background:#000;}
+.Header .HeaderNav li.on a,.Header .HeaderNav li:hover a{ color:#fff;}
+
+/* Banner */
+.Banner{width:100%;position:relative;height:560px;  margin:0 auto; z-index:1;}
+.Banner .bd{margin:0 auto;position:relative;z-index:0;overflow:hidden;}
+.Banner .bd ul{width:100% !important;}
+.Banner .bd li{width:100% !important; height:560px; overflow:hidden; text-align:center;}
+.Banner .bd li a{display:block;height:560px;}
+.Banner .hd{width:100%;position:absolute;z-index:1;bottom:0;left:0;height:30px;line-height:30px;}
+.Banner .hd ul{text-align:center;}
+.Banner .hd ul li{cursor:pointer;display:inline-block;*display:inline;zoom:1;width:12px;height:12px;margin:0 5px;overflow:hidden; border-radius:512px;background:rgba(255,255,255,0.8);line-height:999px;}
+.Banner .hd ul .on{background:rgba(222,185,123,1); width:30px; -webkit-transition: all 0.5s ease; -moz-transition: all 0.5s ease; -ms-transition: all 0.5s ease; -o-transition: all 0.5s ease; transition: all 0.5s ease;}
+.Banner .prev,.Banner .next{position:absolute; top:50%; width:30px; height:52px; margin-top:-26px; background-repeat:no-repeat; background-size:contain; cursor:pointer; display:none;}
+.Banner .prev{left:10%; background:url(../images/iconbannerprev.png);}
+.Banner .next{right:10%; background:url(../images/iconbannernext.png);}
+
+/* About */
+.About{ margin:70px auto 0;}
+.About .AboutTop{ width:100%; text-align: center; color:#333; font-size:36px; font-weight:bold;}
+.About .AboutC{ width:100%; margin:40px auto;}
+.About .AboutC .Details{ width:610px; font-size:14px; color:#666; line-height:44px;}
+.About .AboutC .Img{ width:550px; height:400px; overflow:hidden;}
+.About .AboutC .Img img{ width:550px; height:400px;}
+
+/* News */
+.News{ width:100%; height:500px; background:#000; margin:80px auto 0; position:relative; }
+.News .NewsC{ height:380px; padding:60px 0;}
+.News .Latest{ width:530px; padding:20px 25px; height:340px; background:#fff;}
+.News .Latest .NewsNav{ float:left; width:100%; border-bottom:solid 1px #ddd; height:39px;}
+.News .Latest .NewsNav span{ font-size:20px; color:#333; font-weight:bold;}
+.News .Latest .NewsTop{ float:left; width:100%; height:130px; margin:25px 0 5px;}
+.News .Latest .NewsTop .Img{ width:170px; height:120px; overflow:hidden;}
+.News .Latest .NewsTop .Img img{ width:170px; height:120px; transition: all 0.8s ease;}
+.News .Latest .NewsTop .Img:hover img{transform:scale(1.2)}
+.News .Latest .NewsTop .Con{ width:340px;}
+.News .Latest .NewsTop .Con .Title{ float:left; width:100%; font-size:16px;}
+.News .Latest .NewsTop .Con .Title a{ color:#333;}
+.News .Latest .NewsTop .Con .Title a:hover{ color:#deb97b; text-decoration:underline;}
+.News .Latest .NewsTop .Con .Time{ font-size:14px; float:left; width:100%; margin:5px 0; color:#999;}
+.News .Latest .NewsTop .Con .Cont{ font-size:14px; color:#666; line-height:22px;}
+.News .Latest ul{ float:left; width:100%;}
+.News .Latest ul li{ float:left; width:100%; height:44px; font-size:14px; border-bottom:dashed 1px #ddd; line-height:44px; color:#999;}
+.News .Latest ul li a{ display:block; color:#666;}
+.News .Latest ul li a:hover{ color:#deb97b; text-decoration:underline;}
+
+/* Product */
+.Product{ width:100%; margin:80px auto 0; position:relative;}
+.Product .ProductTop{ width:100%; text-align: center; color:#333; font-size:36px; font-weight:bold;}
+.Product .ProductList{ width:1240px; margin:40px auto 0;}
+.Product .ProductList li{ float:left; width:270px; margin:0 20px;}
+.Product .ProductList li .Img{ width:270px; height:370px; overflow:hidden;}
+.Product .ProductList li .Img img{ width:270px; height:370px; transition: all 0.8s ease;}
+.Product .ProductList li .Title{ width:100%; text-align:center; font-size:16px; margin-top:10px;}
+.Product .ProductList li .Title a{ color:#333;}
+.Product .ProductList li:hover img{transform:scale(1.2)}
+.Product .ProductList li:hover .Title a{ color:#deb97b; text-decoration:underline;}
+
+/* Problem */
+.Problem{ width:100%; margin:80px auto 0; position:relative;}
+.Problem .ProblemTop{ width:100%; text-align: center; color:#333; font-size:36px; font-weight:bold;}
+.Problem .ProblemList{ width:1240px; margin:20px auto 0;}
+.Problem .ProblemList li{ float:left; width:580px; height:170px; margin:20px 20px;}
+.Problem .ProblemList li .Img{ width:240px; height:170px; overflow:hidden;}
+.Problem .ProblemList li .Img img{ width:240px; height:170px; transition: all 0.8s ease;}
+.Problem .ProblemList li:hover img{transform:scale(1.2)}
+.Problem .ProblemList li .Con{ width:320px;}
+.Problem .ProblemList li .Con .Title{ float:left; width:100%; font-size:16px; line-height:30px;}
+.Problem .ProblemList li .Con .Title a{ color:#333; font-weight:bold;}
+.Problem .ProblemList li .Con .Title span{ font-weight:bold; font-size:18px;}
+.Problem .ProblemList li .Con .Title a:hover{ color:#deb97b; text-decoration:underline;}
+.Problem .ProblemList li .Con .Cont{ color:#666; float:left; width:100%; font-size:14px; line-height:30px; margin-top:10px;}
+.Problem .ProblemList li .Con .Cont span{ font-weight:bold; font-size:18px;}
+.Problem .ProblemList li .Con .Cont a{ color:#333; text-decoration:underline;}
+.Problem .ProblemList li .Con .Cont a:hover{ color:#deb97b;}
+
+/* Footer */
+.Footer{ width:100%; padding:0; background:#000; margin:80px auto 0;}
+.Footer .FooterLink{ width:100%; border-bottom:solid 1px #333; padding:15px 0; line-height:26px; font-size:14px; color:#999;}
+.Footer .FooterLink p{ float:left;}
+.Footer .FooterLink a{ color:#999;}
+.Footer .FooterLink span{ margin:0 5px;}
+.Footer .FooterLink a:hover{ color:#deb97b; text-decoration:underline;}
+.Footer .FooterC{ width:1200px; margin:0 auto; padding:40px 0;}
+.Footer .FooterC .Bottom{ width:800px; line-height:34px;}
+.Footer .FooterC .Bottom .FooterNav{ width:100%; float:left;}
+.Footer .FooterC .Bottom .FooterNav p{ float:left; color:#999; font-size:14px;}
+.Footer .FooterC .Bottom .FooterNav a{ color:#999;}
+.Footer .FooterC .Bottom .FooterNav a:hover{ color:#deb97b; text-decoration:underline;}
+.Footer .FooterC .Bottom .FooterNav span{ margin:0 20px;}
+.Footer .FooterC .Bottom .FooterContact{ float:left; width:100%; font-size:14px; color:#999;}
+.Footer .FooterC .Bottom .FooterCopy{ font-size:14px; color:#999; text-transform:uppercase;}
+.Footer .FooterC .Bottom .FooterCopy a{ color:#999;}
+.Footer .FooterC .Bottom .FooterCopy a:hover{ color:#deb97b; text-decoration:underline;}
+.Footer .FooterC .Erweima{ width:120px;}
+.Footer .FooterC .Erweima img{ width:120px; height:120px;}
+.Footer .FooterC .Erweima p{ font-size:12px; width:100%; text-align:center; margin-top:5px; color:#999;}
+
+
+/* floatBottom */
+.floatBottom{height:160px; bottom:0; width:100%; background:rgba(0,0,0,0.8); z-index:9; left:0; position:fixed; display:none; }
+.floatCont{ width:1200px; margin:0 auto; height:160px; position:relative;}
+.floatCont .tltle{  position:absolute; width:610px; height:200px; bottom:0; left:0;}
+.floatCont .tltle .img{background:url(../images/floatcont.png) no-repeat; width:260px; height:200px; float:left;}
+.floatCont .tltle .con{ float:left; width:350px; height:120px; padding:60px 0 20px;}
+.floatCont .tltle .con p{ font-size:34px; font-weight:bold; color:#deb97b; width:100%; float:left;}
+.floatCont .tltle .con span{ float:left; width:100%; font-size:16px; color:#deb97b; line-height:30px; margin-top:10px;}
+.floatCont .tltle .con i{ font-size:28px; margin-left:10px;}
+.floatCont .erweima{ width:150px; height:120px; margin:20px 0;}
+.floatCont .erweima img{ float:left; width:120px; height:120px;}
+.floatCont .erweima p{ float:left; width:100%; text-align:right; color:#fff; width:30px; height:120px;}
+.floatForm{width:370px; height:120px; padding:20px 0; margin-right:40px;}
+.floatForm .top{ float:left; width:100%; margin-bottom:10px; color:#fff; font-size:14px;}
+.floatForm .top span{ color:#deb97b; font-size:16px; font-weight:bold;}
+.floatForm .row{ float: left; width:200px; margin-right:10px;}
+.floatForm input.txt{ border:0; padding:7px 0 7px 16px; width:204px; background:#fff; margin:0 0 11px 0; height:26px; line-height:26px; font-size:14px; float:left;}
+.floatForm input.btn{ border:0; background:#deb97b; width:140px; height:92px; cursor:pointer; text-align:center; font-size:20px; font-weight:bold; color:#000; margin:0; float:right;}
+.floatCloseMenu{ position:absolute; bottom:61px; right:20px; z-index:99; width:38px; height:38px; background:url(../images/iconclose.png);  cursor:pointer; }
+.floatClose{ display:none; position: fixed; left:-130px; bottom: 0; z-index: 9998; width:130px; height: 160px; cursor: pointer; background:rgba(0,0,0,0.8) url(../images/floatclose.png) center center no-repeat;}
+
+
+/* PageMain */
+.PageMain{ width:1200px; margin:80px auto 0;}
+.PageMain .PageLeft{ width:260px;}
+.PageLeft .PageNav{ float:left; width:100%; background:#000;}
+.PageLeft .PageNav .Top{ width:100%; height:58px; border-bottom:solid 2px #333; text-align:center; line-height:58px; font-size:22px; color:#deb97b; font-weight:bold;}
+.PageLeft .PageNav ul{ float:left; width:100%;}
+.PageLeft .PageNav li{ float:left; width:220px; padding:0 20px; height:45px; border-bottom:solid 1px #333; font-size:14px; line-height:45px;}
+.PageLeft .PageNav li a{ display:block; color:#999;}
+.PageLeft .PageNav li:hover,.PageMain .PageNav li.on{ background:#deb97b; }
+.PageLeft .PageNav li:hover a,.PageMain .PageNav li.on a{ color:#000;}
+
+.PageLeft .PageRecommend{ float:left; width:100%; margin-top:20px; background:#000;}
+.PageLeft .PageRecommend .Top{ width:100%; height:58px; border-bottom:solid 2px #333; text-align:center; line-height:58px; font-size:22px; color:#deb97b; font-weight:bold;}
+.PageLeft .PageRecommend ul{ float:left; width:100%;}
+.PageLeft .PageRecommend li{ float:left; width:220px; padding:0 20px; height:45px; border-bottom:solid 1px #333; font-size:14px; line-height:45px;}
+.PageLeft .PageRecommend li a{ display:block; color:#999;}
+.PageLeft .PageRecommend li:hover a{ color:#deb97b;}
+
+.PageLeft .PageContact{ float:left; width:220px; margin-top:20px; padding:20px; background:#000; color:#deb97b;}
+.PageLeft .PageContact .title{ width:100%; font-size:20px; }
+.PageLeft .PageContact .tel{ width:100%; font-size:30px; font-family:'georgia';}
+.PageLeft .PageContact .mailbox{ width:100%; font-size:14px; margin-top:5px;}
+
+.PageMain .PageRight{ width:900px;}
+.PageRight .Top{ float:left; width:100%; height:58px; border-bottom:solid 2px #333; line-height:58px;}
+.PageRight .Top .title{ font-size:24px; color:#333; font-weight:bold;}
+.PageRight .Top .crumbs{ font-size:14px; color:#666;}
+.PageRight .Top .crumbs a{ color:#666;}
+.PageRight .Top .crumbs a:hover{ color:#deb97b; text-decoration:underline;}
+.PageRight .PageAbout{ float:left; width:100%; margin:20px 0 0 0; font-size:14px; line-height:28px; overflow:hidden;}
+.PageRight .PageAbout img{ max-width:100%;}
+
+.PageRight .PageNews{ float:left; width:100%;}
+.PageRight .PageNews li{ float:left; width:100%; height:120px; padding:20px 0; border-bottom:dashed 1px #ddd;}
+.PageRight .PageNews li .Img{ width:170px; height:120px; overflow:hidden;}
+.PageRight .PageNews li .Img img{ width:170px; height:135px; transition: all 0.8s ease;}
+.PageRight .PageNews li .Img:hover img{transform:scale(1.2)}
+.PageRight .PageNews li .Con{ width:710px;}
+.PageRight .PageNews li .Con .Title{ font-size:16px; width:100%; float:left; margin-top:5px;}
+.PageRight .PageNews li .Con .Title a{ color:#333;}
+.PageRight .PageNews li .Con .Title a:hover{ color:#deb97b; text-decoration:underline;}
+.PageRight .PageNews li .Con .Time{ float:left; margin-top:10px; font-size:14px; color:#999; width:100%;}
+.PageRight .PageNews li .Con .Cont{ float:left; margin-top:10px; line-height:24px; font-size:14px; color:#666;}
+
+.PageRight .PageNewsD{ float:left; width:100%; margin-top:20px;}
+.PageRight .PageNewsD .Title{ width:100%; float:left; text-align: center; font-size:30px; color:#333; font-weight:bold;}
+.PageRight .PageNewsD .Time{ float:left; width:100%; margin-top:10px; text-align:center; color:#999; font-size:14px; border-bottom:dashed 1px #ddd; padding-bottom:10px;}
+.PageRight .PageNewsD .Cont{ float:left; width:100%; margin:20px 0; font-size:14px; line-height:28px; color:#333;}
+.PageRight .PageNewsD .Cont img{ max-width:100%;}
+.PageRight .PageNewsD .Share{ float:left; width:100%; text-align:right; border-bottom:dashed 1px #ddd; padding-bottom:10px;}
+
+.PageRight .PageForm{ width:900px; float:right; margin-top:40px;}
+.PageForm .Title{ width:100%; float:left; font-weight:bold; margin:0 0 40px 0; font-size:40px; text-align:center; color:#333;}
+.PageForm .Title span{ color:#deb97b;}
+.PageForm .rowCon{ float:left; width:900px;}
+.PageForm .row{ float:left; margin-left:75px; width:815px;}
+.PageForm .rowInput{float:left; display:block; margin:0 0 10px 0;}
+.PageForm .rowInput span{ font-size:14px; color:#aaa;}
+.PageForm .rowTitle{font-size:14px; color:#333; margin:0; }
+.PageForm .rowLeft{ float:left; font-size:14px; color:#666; margin:0; width:75px; line-height:37px;}
+.PageForm .rowRight{ float:left;}
+.PageForm label{ float:left; position:relative; display:block; }
+.PageForm label span{ position:absolute; left:0; top:11px; font-size:12px; color:#aaa; padding-left:10px;}
+.PageForm .txt{ border:1px solid #ccc;  padding-left:10px;}
+.PageForm .txt.w1{ width:348px; height:40px; border:1px solid #ccc; }
+.PageForm .txt.w1:focus{ border:1px solid #deb97b; padding-left:10px; }
+.PageForm .txt.w3{ width:813px; line-height:16px; height:118px; border:1px solid #ccc; padding:10px 0 0 10px;}
+.PageForm .txt.w3:focus{ border:1px solid #deb97b; padding:10px 0 0 10px; }
+.PageForm .btn{ float: left; width:140px; border:0px;cursor:pointer;  height:40px; line-height:40px; background:#eee; font-size:14px; margin:0; color:#666;}
+.PageForm .btn:hover{background:#deb97b; color:#000;-webkit-transition: all 0.7s ease; -moz-transition: all 0.7s ease; -ms-transition: all 0.7s ease; -o-transition: all 0.7s ease; transition: all 0.7s ease;}
+.PageForm .secret{ float:right; width: auto; font-size:16px; line-height:50px; color:#fff; font-weight:bold;}
+.PageForm .con{ float:right;  text-align:right; width:675px; font-size:16px; line-height:40px; color:#333; font-weight:bold;}
+
+.PageProduct{ width:1240px; margin:60px auto 0;}
+.PageProduct .Top{ float:left; margin:0 20px; width:1200px; height:58px; border-bottom:solid 2px #333; line-height:58px;}
+.PageProduct .Top .title{ font-size:24px; color:#333; font-weight:bold;}
+.PageProduct .Top .crumbs{ font-size:14px; color:#666;}
+.PageProduct .Top .crumbs a{ color:#666;}
+.PageProduct .Top .crumbs a:hover{ color:#deb97b; text-decoration:underline;}
+.PageProduct .ProductNav{ float:left; width:100%; margin:40px auto 0;}
+.PageProduct .ProductNav ul{ width:980px; margin:0 auto;}
+.PageProduct .ProductNav li{ float: left; width:128px; height:43px; margin:0 5px; border:solid 1px #666; text-align:center; line-height:43px;}
+.PageProduct .ProductNav li a{ display:block; color:#333; font-size:14px;}
+.PageProduct .ProductNav li:hover,.PageProduct .ProductNav li.on{ background:#deb97b; border-color:#deb97b;}
+.PageProduct .ProductNav li:hover a,.PageProduct .ProductNav li.on a{ color:#333;}
+.PageProduct .ProductList{ float:left; width:1240px; margin:40px 0 0;}
+.PageProduct .ProductList li{ float:left; width:270px; margin:0 20px;}
+.PageProduct .ProductList li .Img{ width:270px; height:370px; overflow:hidden;}
+.PageProduct .ProductList li .Img img{ width:270px; height:370px; transition: all 0.8s ease;}
+.PageProduct .ProductList li .Title{ width:100%; text-align:center; font-size:16px; margin-top:10px;}
+.PageProduct .ProductList li .Title a{ color:#333;}
+.PageProduct .ProductList li:hover img{transform:scale(1.2)}
+.PageProduct .ProductList li:hover .Title a{ color:#deb97b; text-decoration:underline;}
+
+
+/* pages */
+.pages { margin:40px 0; position:relative; text-align:center; font-size:12px;}
+.pages a { display:inline-block; height:35px; line-height:35px; background:#fff; border:1px solid #ddd; text-align:center; color:#333; padding:0 15px; margin-left:6px;}
+.pages a.a1 { background:#fff; width:56px; padding:0; }
+.pages a:hover { background:#deb97b;  border:1px solid #deb97b; color:#fff; text-decoration:none }
+.pages span { display:inline-block; height:35px; line-height:35px; background:#deb97b; border:1px solid #deb97b; color:#fff; text-align:center; padding:0 15px; margin-left:6px;}
+
+.pages1{ float:left; width:100%; margin-top:20px;}
+.pages1 a{ font-size:14px; color:#333;}
+.pages1 a:hover{ color:#deb97b; text-decoration:underline;}
+
+
+
+
+
+
+
+
+
+
+
+
