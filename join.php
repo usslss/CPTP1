@@ -1,6 +1,6 @@
 ﻿<?php
 include_once "php/connect.php";
-$page = "about";
+$page = "join";
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -47,7 +47,8 @@ $page = "about";
 					</div>
 				</div>
 				<div class="PageAbout">
-					<?php include_once "php/about/aboutText.php";?>
+					<?php include_once "php/join/joinText.php";?>
+					
 				</div>
 			</div>
 			<div class="clear"></div>
@@ -65,7 +66,6 @@ $page = "about";
 	</body>
 
 </html>
-
 <?php
 mysqli_close($link);
 ?>

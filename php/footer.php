@@ -52,6 +52,7 @@ EOT;
 </div>
 <div class="clear"></div>
 </div>
-<?php //最后记得恢复这里的53客服 
-/*<script>(function() {var _53code = document.createElement("script");_53code.src = "https://tb.53kf.com/code/code/10180534/4";var s = document.getElementsByTagName("script")[0]; s.parentNode.insertBefore(_53code, s);})();</script>*/
+<?php 
+//最后记得恢复这里的53客服 
+//echo $infoArr[$website]["53kf"];
 ?>

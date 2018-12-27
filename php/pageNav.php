@@ -12,8 +12,6 @@ while ($row = mysqli_fetch_assoc($result)) {
     $navArr[$i]["url"] = $row["url"];
     if ($row["page"] == $page) {
         $navArr[$i]["class"] = "on";
-        $pageUrl=$row["url"];
-        $pageName=$row["name"];
     } else {
         $navArr[$i]["class"] = "";
     }

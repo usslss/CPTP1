@@ -12,6 +12,8 @@ while ($row = mysqli_fetch_assoc($result)) {
     $navArr[$i]["url"] = $row["url"];
     if ($row["page"] == $page) {
         $navArr[$i]["class"] = "on";
+        $pageUrl=$row["url"];
+        $pageName=$row["name"];
     } else {
         $navArr[$i]["class"] = "";
     }
@@ -34,6 +36,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     $infoArr[$website]["copyright"] = $row["copyright"];
     $infoArr[$website]["mitbeian"] = $row["mitbeian"];
     $infoArr[$website]["jmsum"] = $row["jmsum"];
+    $infoArr[$website]["53kf"] = $row["53kf"];
 
 }
 
