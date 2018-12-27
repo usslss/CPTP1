@@ -21,11 +21,10 @@ $page = "index";
 
 		<!--header-->
 		<?php include_once "php/header.php";?>
-
 		<!--header end-->
 
 		<!--banner-->
-		<?php include_once "php/index/banner.php";?>
+		<?php include_once "php/banner.php";?>
 		<!--banner end-->
 
 		<!--About-->
