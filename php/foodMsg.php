@@ -24,7 +24,9 @@ function foodMSG($name,$phone,$content,$gender,$clickplace,$website,$version){
         $gender=2;
     }
     
-    
+    if($content==''){
+        $content='无留言内容';
+    }
     
     $content=$website."_".$version."_".$clickplace."_".$content;
     

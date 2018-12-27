@@ -149,7 +149,7 @@ input:focus,textarea:focus,select:focus,button:focus{ outline:none;}
 .floatCloseMenu{ position:absolute; bottom:61px; right:20px; z-index:99; width:38px; height:38px; background:url(../images/iconclose.png);  cursor:pointer; }
 .floatClose{ display:none; position: fixed; left:-130px; bottom: 0; z-index: 9998; width:130px; height: 160px; cursor: pointer; background:rgba(0,0,0,0.8) url(../images/floatclose.png) center center no-repeat;}
 .buttonX{border:0; background:#deb97b; width:140px; height:92px; cursor:pointer; text-align:center; line-height:92px;font-size:20px; font-weight:bold; color:#000; margin:0; float:right;}
-
+.buttonX:hover{border:0; background:#deb97b; width:140px; height:92px; cursor:pointer; text-align:center; line-height:92px;font-size:20px; font-weight:bold; color:#000; margin:0; float:right;}
 /* PageMain */
 .PageMain{ width:1200px; margin:80px auto 0;}
 .PageMain .PageLeft{ width:260px;}
@@ -222,6 +222,8 @@ input:focus,textarea:focus,select:focus,button:focus{ outline:none;}
 .PageForm .btn:hover{background:#deb97b; color:#000;-webkit-transition: all 0.7s ease; -moz-transition: all 0.7s ease; -ms-transition: all 0.7s ease; -o-transition: all 0.7s ease; transition: all 0.7s ease;}
 .PageForm .secret{ float:right; width: auto; font-size:16px; line-height:50px; color:#fff; font-weight:bold;}
 .PageForm .con{ float:right;  text-align:right; width:675px; font-size:16px; line-height:40px; color:#333; font-weight:bold;}
+.buttonApply{ float: left; width:140px; border:0px;cursor:pointer;  height:40px; line-height:40px; background:#eee; font-size:14px; margin:0; color:#666;text-align: center;}
+.buttonApply:hover{background:#deb97b; color:#000;-webkit-transition: all 0.7s ease; -moz-transition: all 0.7s ease; -ms-transition: all 0.7s ease; -o-transition: all 0.7s ease; transition: all 0.7s ease;}
 
 .PageProduct{ width:1240px; margin:60px auto 0;}
 .PageProduct .Top{ float:left; margin:0 20px; width:1200px; height:58px; border-bottom:solid 2px #333; line-height:58px;}

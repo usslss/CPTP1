@@ -1,12 +1,12 @@
 <?php 
-include_once("connect.php");
-include_once("foodMsg.php");
+include_once("../connect.php");
+include_once("../foodMsg.php");
 $clickplace="PC留言页面";
 $source=$website;
 
-@$name = htmlspecialchars(trim($_POST['username_h']));
-@$phone = htmlspecialchars(trim($_POST['tel_h']));
-@$reason = htmlspecialchars(trim($_POST['content']));
+@$name = htmlspecialchars(trim($_POST['dataYourName']));
+@$phone = htmlspecialchars(trim($_POST['dataYourTel']));
+@$reason = htmlspecialchars(trim($_POST['dataContent']));
 
 
 
@@ -17,7 +17,7 @@ $checkphone=' /^1\d{10}$/';
 
 
 if(empty($name)){
-    echo "姓名不能为空！";
+    echo "姓名不能为222空！";
     exit;
 }
 
