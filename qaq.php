@@ -1,6 +1,6 @@
 ﻿<?php
 include_once "php/connect.php";
-$page = "about";
+$page = "qaq";
 ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
@@ -26,6 +26,12 @@ $page = "about";
 		<?php include_once "php/banner.php";?>
 		<!--banner end-->
 
+		<!-- pagebanner -->
+		<div class="pagebanner" style="background: url() center center no-repeat;">
+			<div class="clear"></div>
+		</div>
+		<!-- END pagebanner -->
+
 		<!--PageMain-->
 		<div class="PageMain">
 			<div class="PageLeft l">
@@ -45,10 +51,8 @@ $page = "about";
 						<a href="<?php echo $pageUrl; ?>" title="<?php echo $pageName; ?>"><?php echo $pageName; ?></a>
 					</div>
 				</div>
-				<div class="PageAbout">
-					<?php include_once "php/about/aboutText.php";?>
-				</div>
-			</div>
+				<?php include_once "php/qaq/qaq_list.php";?>
+
 			<div class="clear"></div>
 		</div>
 		<!--PageMain end-->
@@ -64,7 +68,6 @@ $page = "about";
 	</body>
 
 </html>
-
 <?php
 mysqli_close($link);
 ?>
