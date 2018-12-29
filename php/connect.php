@@ -6,7 +6,7 @@ $db_name = "joinstarbucks";
 $timezone = "Asia/Shanghai";
 
 $website = "雾社茶町";
-$version = "pc";
+$version = "PC";
 
 $link = mysqli_connect($host, $db_user, $db_pass);//连接数据库主机
 mysqli_select_db($link, $db_name);//选择数据库

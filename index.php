@@ -47,17 +47,14 @@ $page = "index";
 
 		<!--Problem-->
 		<?php include_once "php/index/problem_list.php";?>
-
 		<!--Problem end-->
 
 		<!--Footer-->
 		<?php include_once("php/footer.php");?>	
-
 		<!--Footer end-->
 
 		<!--floatBottom-->
 		<?php include_once("php/floatBottom.php");?>
-
 		<!--floatBottom end-->
 
 	</body>
