@@ -17,7 +17,7 @@ $checkphone=' /^1\d{10}$/';
 
 
 if(empty($name)){
-    echo "姓名不能为222空！";
+    echo "姓名不能为空！";
     exit;
 }
 
