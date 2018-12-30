@@ -1,6 +1,6 @@
 <?php
 include_once "../php/connect.php";
-$page = "news";
+$page = "apply";
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -35,12 +35,16 @@ $page = "news";
 		<!--banner-->
 		<?php include_once "php/banner.php";?>
 		<!--banner end-->	
-		
-		<!--news list-->
-		<?php include_once "php/news/news_nav.php";?>
-		<?php include_once "php/news/news_list.php";?>
-		<!--news list end-->
-		
+
+		<div class="crumbs">您当前的位置：
+			<a href="index.php">首页</a><span>></span>
+			<a href="apply.php" title="<?php echo $pageName; ?>"><?php echo $pageName; ?></a>
+		</div>
+
+		<div class="pageForm">
+			如果您对该项目感兴趣,请<span>留言咨询</span>！
+			<div class="clear"></div>
+		</div>
 
 		<!--Apply end-->
 		<?php include_once "php/msgList.php";?>

@@ -1,6 +1,6 @@
 <?php
 include_once "../php/connect.php";
-$page = "news";
+$page = "join";
 ?>
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
@@ -35,12 +35,10 @@ $page = "news";
 		<!--banner-->
 		<?php include_once "php/banner.php";?>
 		<!--banner end-->	
-		
-		<!--news list-->
-		<?php include_once "php/news/news_nav.php";?>
-		<?php include_once "php/news/news_list.php";?>
-		<!--news list end-->
-		
+
+		<!--joinText-->
+		<?php include_once "php/join/joinText.php";?>
+		<!--joinText end-->
 
 		<!--Apply end-->
 		<?php include_once "php/msgList.php";?>

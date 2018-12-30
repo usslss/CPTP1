@@ -42,7 +42,7 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 ?>
 <!-- 移动适配JS脚本 -->
-<!--
+<!-- 
 	<script type="text/javascript">
     if (window.location.toString().indexOf('pref=padindex') != -1) {
     } else {
@@ -50,18 +50,18 @@ while ($row = mysqli_fetch_assoc($result)) {
             if (window.location.href.indexOf("?mobile")<0){
                 try {
                     if (/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
-                        window.location.href="/wap/<?php echo $page; ?>";
+                        window.location.href="/wap"+window.location.pathname;
                     } else if (/iPad/i.test(navigator.userAgent)) {
                         //window.location.href="/wap/"
                     } else {
-                        window.location.href="/wap/<?php echo $page; ?>"
+                        window.location.href="/wap"+window.location.pathname
                     }
                 } catch (e) {}
             }
         }
     }
 </script>
- -->
+-->
 		<div class="Header">
 			<div class="HeaderC">
 				<div class="HeaderTop c1200">

@@ -40,13 +40,12 @@ while ($row=mysqli_fetch_assoc($result)){
     $page_keywords=$row["page_keywords"];
     $page_description=$row["page_description"];
 }
+
 //点击数+1
 $show_qaq_click=$show_qaq_click+1;
 $sql_click="UPDATE cptp_others SET click={$show_qaq_click} WHERE id='{$qaq_id}'";
 
 $result=mysqli_query($link, $sql_click);
-
-
 
 //上一条新闻
 $sql_prev="SELECT * FROM cptp_others WHERE id<{$qaq_id} AND class='{$show_qaq_class}' AND website='{$website}' ORDER BY id DESC LIMIT 1";
@@ -62,7 +61,6 @@ if ((isset($prev_qaq_id)==false)){
     $prev_qaq_url="#";
     $prev_qaq_title="没有了";
 }
-
 
 //下一条新闻
 $sql_next="SELECT * FROM cptp_others WHERE id>{$qaq_id} AND class='{$show_qaq_class}' AND website='{$website}' ORDER BY id ASC LIMIT 1";

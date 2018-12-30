@@ -53,21 +53,22 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 ?>
 
-		<div class="pagenews">
+		<div class="pageNews">
 			<ul>
 <?php
 
 for ($i = ($news_start); (($i < ($news_start + $news_shownum)) & ($i <= $news_sum[0])); $i++) {
     //如果对标题的长度有限制
-    //$news_title_short=mb_substr($newsarr[$i]["news_title"],0,22,'utf-8');
+    $news_title_short=mb_substr($newsArr[$i]["news_title"],0,18,'utf-8');
+    $news_summary_short=mb_substr($newsArr[$i]["news_summary"],0,20,'utf-8');
     echo <<< EOT
 				<li>
                     <a href="{$newsArr[$i]["news_url"]}">
 						<div class="Img l"><img src="{$newsArr[$i]["news_img_url"]}" onerror="this.src='picture/news.jpg'" /></div>
 						<div class="Cont r">
-							<p class="title">{$newsArr[$i]["news_title"]}</p>
+							<p class="title">{$news_title_short}</p>
 							<p class="time">发布时间：2018-09-19</p>
-							<p class="con">2018年8月16日，雾社茶町品牌官...</p>
+							<p class="con">{$news_summary_short}</p>
 						</div>
                     </a> 
                 </li>               
