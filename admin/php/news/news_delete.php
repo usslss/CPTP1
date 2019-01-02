@@ -5,7 +5,7 @@ include_once("../connect.php");
 $news_id=$_POST["news_id"];
 
 
-$sql = "DELETE FROM news WHERE news_id = {$news_id}";
+$sql = "DELETE FROM cptp_news WHERE news_id = {$news_id}";
 
 
 $sqlfinish = mysqli_query($link,$sql);

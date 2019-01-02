@@ -19,7 +19,7 @@ if (isset($_GET["limit"])){
     $list_show=$_GET["limit"];
 }
 
-
+// like website 单项查询
 if (isset($_GET["website"])){
     $query_website=$_GET["website"];
     if ($_GET["website"]=="网站名"){
@@ -31,10 +31,10 @@ if (isset($_GET["website"])){
 
 
 
-$sqllink = "SELECT * FROM link WHERE link_website LIKE '{$query_website}' ";
+$sqllink = "SELECT * FROM link WHERE link_website = '{$website}' ";
 
 //数量
-$sqlsum = "SELECT count(*) FROM link WHERE link_website LIKE '{$query_website}'";
+$sqlsum = "SELECT count(*) FROM link WHERE link_website = '{$website}'";
 $a = mysqli_query($link,$sqlsum);
 $xx = mysqli_fetch_row($a);
 $sum = $xx[0];

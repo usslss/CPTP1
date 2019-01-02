@@ -85,7 +85,7 @@ if ((isset($next_news_id)==false)){
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 		<link rel="shortcut icon" href="/favicon.ico">
-		<title><?php echo $page_title;?> - <?php echo $show_news_title;?></title>
+		<title><?php echo $show_news_title;?> - <?php echo $page_title;?></title>
 		<meta name="keywords" content="<?php echo $page_keywords;?>" />
 		<meta name="description" content="<?php echo $page_description;?>">	
 		<link rel="shortcut icon" href="/favicon.ico">

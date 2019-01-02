@@ -40,7 +40,7 @@ $nav_sum = $i;
 		<div class="pageNav">
 			<ul>
 				<li class="<?php echo $allNewsClass;?>">
-					<a href="news.php">全部产品</a>
+					<a href="news.php">全部新闻</a>
 				</li>
 <?php
 for ($i = 0; $i < $nav_sum; $i++) {

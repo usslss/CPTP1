@@ -35,7 +35,7 @@ if (isset($_GET["website"])){
     $query_website='%';
 }
 
-
+$query_website=$website; //只搜索本网站
 
 $sqlmsg = "SELECT page_class, page_title, page_keywords, page_description FROM page WHERE page_class LIKE '{$query_name}_{$query_website}' ";
 

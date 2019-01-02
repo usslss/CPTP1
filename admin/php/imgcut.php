@@ -56,19 +56,3 @@ function image_center_crop($source, $width, $height, $target)
 }
 
 ?>
-<?php 
-
-// 裁剪图片
-if(isset($file_url)){
-    include("php/imgcut.php");
-    $source = $file_url;
-    
-    $width = 360; // 裁剪后的宽度
-    $height = 413;// 裁剪后的高度
-    // 裁剪后的图片存放目录
-    $target = $file_url;
-    
-    image_center_crop($source, $width, $height, $target);
-}
-
-?>

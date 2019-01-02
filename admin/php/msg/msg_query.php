@@ -17,18 +17,10 @@ $a = mysqli_query($link,$sqlsum);
 $b = mysqli_fetch_row($a);
 $sum = $b[0];
 
-/*
-if (isset($_GET["search"])){
-    $sum=$_GET["search"];
-}
-*/
 $page="1";
 $list_show="10";
 $result="";
 $i="1";
-$chuanzhiming="0";
-
-
 
 if (isset($_GET["page"])){
     $page=$_GET["page"];
@@ -38,42 +30,13 @@ if (isset($_GET["limit"])){
     $list_show=$_GET["limit"];    
 }
 
-if (isset($_GET["chuanzhiming"])){
-    $chuanzhiming=$_GET["chuanzhiming"];
-}   
-
-$sqlmsg = "SELECT id, name ,email, gender, phone ,question,msgcheckbox,clickplace,source,addtime FROM msg";
-    
-if($chuanzhiming==1){
-$sqlfinal="SELECT id, name ,email, gender, phone ,question,msgcheckbox,clickplace,source,addtime FROM msg WHERE gender='男'";
-$sqlmsg = $sqlfinal;
-
-$sqlsum = "SELECT count(id) FROM msg where gender='男'";
-$a = mysqli_query($link,$sqlsum);
-$b = mysqli_fetch_row($a);
-$sum = $b[0];
-}
-
-if($chuanzhiming==2){
-$sqlfinal="SELECT id, name ,email, gender, phone ,question,msgcheckbox,clickplace,source,addtime FROM msg WHERE gender='女'";
-$sqlmsg = $sqlfinal;
 
 
-$sqlsum = "SELECT count(id) FROM msg where gender='女'";
-$a = mysqli_query($link,$sqlsum);
-$b = mysqli_fetch_row($a);
-$sum = $b[0];
-
-
-}
-
-
+$sqlmsg = "SELECT * FROM msg WHERE source='{$website}' ";
+  
 
 $list_head=$list_show*($page-1);
 $list_bottom=$list_show*$page;
-
-
-
 
 $msglink = $link->query($sqlmsg);
 

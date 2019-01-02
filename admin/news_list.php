@@ -1,45 +1,31 @@
 <?php
-
 include('php/identify.php');
 
-
 //获取关键词的页面和网站属性
-$sql_getpage="SELECT * FROM page";
+$sql_getclass="SELECT news_class FROM news";
 
-$result1=mysqli_query($link, $sql_getpage);
-$result2=mysqli_query($link, $sql_getpage);
+$result1=mysqli_query($link, $sql_getclass);
+
 
 $i=0;
 while ($row=mysqli_fetch_assoc($result1)){
-    $cut=explode('_',$row["page_class"]);
-    $quchong[$i]=$cut[0];
+    $quchong[$i]=$row["news_class"];
     $i++;
 }
-$i=0;
-foreach (array_unique($quchong) as $id => $name) {
-    $pagearr[$i]["page_name"] = $name;
-    $i++;
-}
-$pagename_sum=$i;
-
 
 $i=0;
-while ($row=mysqli_fetch_assoc($result2)){
-    $cut=explode('_',$row["page_class"]);
-    $quchong[$i]=$cut[1];
+foreach (array_unique($quchong) as $id => $news_class) {
+    $newsarr[$i]["news_class"] = $news_class;
     $i++;
 }
-$i=0;
-foreach (array_unique($quchong) as $id => $website) {
-    $pagearr[$i]["page_website"] = $website;
-    $i++;
-}
-$website_sum=$i;
+$newsclass_sum=$i;
+
+
+
 
 
 
 ?>
-
 <!DOCTYPE html>
 <html>
   
@@ -66,9 +52,9 @@ $website_sum=$i;
     <div class="x-nav">
       <span class="layui-breadcrumb">
         <a target="_parent" href="index.php">首页</a>
-        <a href="page_list.php">页面管理</a>
+        <a href="news_list.php">新闻管理</a>
         <a>
-          <cite>页面列表</cite></a>
+          <cite>新闻列表</cite></a>
       </span>
       <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" href="javascript:location.replace(location.href);" title="刷新">
         <i class="layui-icon" style="line-height:30px">ဂ</i></a>
@@ -76,63 +62,6 @@ $website_sum=$i;
     
     <div class="x-body">
     
-
-
-
-
-
-<!--
- <div class="layui-row">
-        <form class="layui-form layui-col-md12 x-so layui-form-pane">
-
-
-
-
-
-          <div class="layui-input-inline">                     
-            <select name="website">
-              <option>网站名</option>
-<?php			
-if (isset($_GET["website"])){
-    $query_website=$_GET["website"];
-}
-else{
-    $query_website="";
-}
-/*
-for ($i=0;$i<$website_sum;$i++){    
-    if($pagearr[$i]["page_website"]==$query_website){
-        echo <<< EOT
-        <option selected="selected">{$pagearr[$i]["page_website"]}</option>
-EOT;
-    }
-        else {         
-            echo <<< EOT
-        <option>{$pagearr[$i]["page_website"]}</option>
-EOT;
-        }
-    
-}
-*/
-?>               
-            </select>
-          </div>
-         
-          <button class="layui-btn"  lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i>搜索</button>
-        </form>
-      </div>
-
--->
-
-
-
-
-
-
-
-
-
-
 
 
 <table class="layui-hide" id="LAY_table_user" lay-filter="useruv"></table>
@@ -143,9 +72,7 @@ EOT;
 
 <script type="text/html" id="barDemo">
 <a class="layui-btn layui-btn-xs " lay-event="edit" method="post"><i class="layui-icon">&#xe642;</i>编辑</a>    
-<!-- 
 <a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="del"><i class="layui-icon">&#xe640;</i>删除</a>
---!>
 </script>
 
 
@@ -165,15 +92,16 @@ EOT;
         //方法级渲染
         table.render({
             elem: '#LAY_table_user'
-            ,url: 'php/page/page_query.php'
+            ,url: 'php/news/news_query.php'
             ,method: 'get'
-            ,where: {website: '<?php echo $query_website;?>',xx:5 }
+            ,where: {xx:5 }
             ,cols: [[
-                {field:'page_class', title: '页面', sort: true, fixed: false,width:100}
-                ,{field:'page_title', title: '页面标题', sort: false, fixed: false,width:300}
-                ,{field:'page_keywords', title: '页面关键字',  sort: false, fixed: false}
-                ,{field:'page_description', title: '页面描述', sort: false, fixed: false,width:100}        
-                ,{field:'page_website', title: '网站', sort: true, fixed: false,width:100}
+                {field:'news_id', title: '新闻ID', sort: true, fixed: false,width:100}
+                ,{field:'news_title', title: '新闻标题', sort: false, fixed: false,width:300}
+                ,{field:'news_summary', title: '新闻摘要文字',  sort: false, fixed: false}  
+                //,{field:'news_class', title: '新闻分类', sort: false, fixed: false,width:150}
+                ,{field:'news_click', title: '点击数量', sort: false, fixed: false,width:100}
+                ,{field:'news_addtime', title: '添加时间', sort: true, fixed: false,width:180}
                 ,{field:'right', title: '操作', width:178,align:'center',toolbar:"#barDemo", fixed: 'right'}
             ]]
             ,id: 'testReload'
@@ -182,26 +110,58 @@ EOT;
         });
 
 
+//js实现条件搜索传值的地方
+        
+        var $ = layui.$, active = {
+            reload: function(){
+                var isSearch = '1';
+                var search_startdate= $('#search_startdate');
+                var search_enddate= $('#search_enddate');
+                var search_gender= $('#search_gender');
+                var search_source= $('#search_source');
+                var search_option= $('#search_option');
+                var search_option_keyword= $('#search_option_keyword');
+                var 传值名 = $('#传值名');           
+                table.reload('testReload', {
+                	url: 'php/msg_search.php',
+                	method: 'post',  
+                    where: {
+                    	search_startdate:search_startdate.val(),
+                    	search_enddate:search_enddate.val(),
+                    	search_gender:search_gender.val(),
+                    	search_source:search_source.val(),
+                    	search_option: search_option.val(),
+                    	search_option_keyword: search_option_keyword.val(),
+                        chuanzhiming: 传值名.val(),   
+                    }
+                });
+            }
+        };
 
 
+
+        //监听表格复选框选择
+        table.on('checkbox(useruv)', function(obj){
+            console.log(obj)
+        });
         //监听工具条
         table.on('tool(useruv)', function(obj){
             var data = obj.data;
             if(obj.event === 'edit'){
 
-                var c='php/page/page_edit.php?page_class='+data.page_class+'_'+data.page_website;
-                x_admin_show('页面编辑',c,1000,380);
+                var c='php/news/news_edit.php?news_id='+data.news_id;
+                x_admin_show('新闻编辑',c,1200,810);
              	 
              	               
             } else if(obj.event === 'del'){
-                layer.confirm('确定删除?', function(index){
+                layer.confirm('确定删除这条新闻?', function(index){
                     console.log(data);
                     obj.del();
                     layer.close(index);
                     $.ajax({
-                        url: "php/page/page_delete.php",
+                        url: "php/news/news_delete.php",
                         type: "post",
-                        data:{"page_class":data.page_class,"page_website":data.page_website},
+                        data:{"news_id":data.news_id,"news_url":data.news_url},
                         dataType: "text",
                         
 
@@ -300,7 +260,6 @@ EOT;
       
       
       
-
 
  
 

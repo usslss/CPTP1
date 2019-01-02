@@ -74,8 +74,7 @@ include 'php/identify.php';
                 ,{field:'copyright', title: '版权声明', sort: false, fixed: false}
                 ,{field:'mitbeian', title: '备案号', sort: false, fixed: false,width:200}
                 ,{field:'joinSum', title: '加盟人数', sort: false, fixed: false,width:130}
-                ,{field:'53kfStatus', title:'53客服状态', sort: false, fixed: false,width:120}
-                ,{field:'store_show', title:'显示', width:85, templet: '#switchTpl', unresize: true,width:120}
+                ,{field:'switchStatus', title:'53客服状态', width:85, templet: '#switchTpl', unresize: true,width:120}
                 ,{field:'right', title: '操作', width:178,align:'center',toolbar:"#barDemo", fixed: 'right',width:100}
             ]]
             ,id: 'testReload'
@@ -83,7 +82,15 @@ include 'php/identify.php';
             //,height: 600
         });
 
-
+	    //监听显示状态
+        form.on('switch(showCheckbox)', function(obj){
+ 			 $.ajax({
+                 url: "php/website/website_checkbox_finish.php",
+                 type: "get",
+                 data:{"id":this.value,"switchStatus":obj.elem.checked},
+                 dataType: "text",
+                 });
+             });   
         //监听工具条
         table.on('tool(useruv)', function(obj){
             var data = obj.data;

@@ -33,7 +33,7 @@ include('php/identify.php');
             <dl class="layui-nav-child"> <!-- 二级菜单 -->
               
               <dd><a onclick="x_admin_show('上传图片','php/add/img_add.php',600,420)"><i class="iconfont">&#xe6a8;</i>图片</a></dd>
-               <dd><a onclick="x_admin_show('添加新闻','news_add.php',1200,810)"><i class="iconfont">&#xe6fc;</i>新闻</a></dd>
+               <dd><a onclick="x_admin_show('添加新闻','php/add/news_add.php',1200,810)"><i class="iconfont">&#xe6fc;</i>新闻</a></dd>
                <dd><a onclick="x_admin_show('添加友情链接','php/add/link_add.php',800,260)"><i class="iconfont">&#xe6fc;</i>友情链接</a></dd>
             </dl>
           </li>
@@ -163,7 +163,7 @@ include('php/identify.php');
                 </a>
                 <ul class="sub-menu">
                     <li>
-                        <a _href="store_list.php">
+                        <a _href="news_list.php">
                             <i class="iconfont">&#xe6a7;</i>
                             <cite>新闻列表</cite>
                         </a>

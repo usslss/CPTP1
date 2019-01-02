@@ -26,7 +26,7 @@ if ($news_sum[0] < $news_shownum) {
 }
 
 
-$sql_news = "SELECT * FROM cptp_news WHERE news_website='{$website}' ORDER BY news_addtime ";
+$sql_news = "SELECT * FROM cptp_news WHERE news_website='{$website}' ORDER BY news_addtime DESC ";
 
 
 $result = mysqli_query($link, $sql_news);

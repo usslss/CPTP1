@@ -38,15 +38,11 @@
                     <input type="hidden" value="" name="page_website"></input>
                     <tr>
                             <th width="100" colspan="1">网站名称</th>
-                            <td colspan="1" ><div class="layui-input-inline">
+                            <td colspan="3" ><div class="layui-input-inline">
                   <input type="text" style="width:400px" name="link_name" required="" lay-verify="required"
                   autocomplete="off" class="layui-input" value="">
               </div></td>
-                         <td colspan="1"  width="50">网站</td>
-                  <td colspan="1"  width="100">
-                  <input type="text" style="width:100px" name="link_website" required="" lay-verify="required"
-                  autocomplete="off" class="layui-input" value="">
-                  </td>
+
                         <tr>
                             <th colspan="1">网站地址</th>
                             <td colspan="3" width="400"><div class="layui-input-inline">

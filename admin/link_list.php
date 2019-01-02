@@ -4,7 +4,6 @@ include('php/identify.php');
 
 //获取关键词的页面和网站属性
 $sql_getLinkWebsite="SELECT DISTINCT link_website FROM link";
-
 $result1=mysqli_query($link, $sql_getLinkWebsite);
 
 $i=0;
@@ -14,9 +13,6 @@ while ($row=mysqli_fetch_assoc($result1)){
 }
    
 $website_sum=$i;
-
-
-
 
 ?>
 
@@ -61,7 +57,7 @@ $website_sum=$i;
 
 
 
-
+<!--  //按网站计算的 单项查询 
  <div class="layui-row">
         <form class="layui-form layui-col-md12 x-so layui-form-pane">
 
@@ -70,6 +66,7 @@ $website_sum=$i;
 
 
           <div class="layui-input-inline">                     
+           
             <select name="website">
               <option>网站名</option>
 <?php			
@@ -79,7 +76,7 @@ if (isset($_GET["website"])){
 else{
     $query_website="网站名";
 }
-
+/*
 for ($i=0;$i<$website_sum;$i++){    
     if($websiteArr[$i]==$query_website){
         echo <<< EOT
@@ -94,14 +91,18 @@ EOT;
     
 
 }
+*/
 ?>               
             </select>
-          </div>
          
+          </div>
+          
           <button class="layui-btn"  lay-submit="" lay-filter="sreach"><i class="layui-icon">&#xe615;</i>搜索</button>
+            
         </form>
       </div>
-
+    
+-->
 
 
 

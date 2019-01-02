@@ -186,7 +186,7 @@ input:focus,textarea:focus,select:focus{ outline:none;}
 
 .pageNav{ width:100%; margin:-7px auto 0; background:#fff; padding-bottom:2px; }
 .pageNav ul{ width:99%; margin:0 auto; padding:0.5%;}
-.pageNav li{ float:left; margin:0.5%; width:24%; padding:7px 0; background:#eee; text-align:center}
+.pageNav li{ float:left; margin:0.5%; width:24%; padding:7px 0; background:#eee; text-align:center;height: 16px;}
 .pageNav li a{ font-size:10px; color:#333; display:block;}
 .pageNav li:hover{ background:#deb97b;}
 .pageNav .on{ background:#deb97b;}

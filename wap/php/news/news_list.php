@@ -31,9 +31,9 @@ if ($news_sum[0] < $news_shownum) {
 }
 
 if ($showNewsClass == '') {
-    $sql_news = "SELECT * FROM cptp_news WHERE news_website='{$website}' ORDER BY news_addtime ";
+    $sql_news = "SELECT * FROM cptp_news WHERE news_website='{$website}' ORDER BY news_addtime DESC";
 } else {
-    $sql_news = "SELECT * FROM cptp_news WHERE news_class='$showNewsClass' AND news_website='{$website}' ORDER BY news_addtime ";
+    $sql_news = "SELECT * FROM cptp_news WHERE news_class='$showNewsClass' AND news_website='{$website}' ORDER BY news_addtime DESC";
 }
 
 $result = mysqli_query($link, $sql_news);
@@ -43,8 +43,8 @@ while ($row = mysqli_fetch_assoc($result)) {
     $newsArr[$i]["news_id"] = $row["news_id"];
     $newsArr[$i]["news_title"] = $row["news_title"];
     $newsArr[$i]["news_summary"] = $row["news_summary"];
-    $newsArr[$i]["news_img_url"] = $row["news_img_url"];
-    $newsArr[$i]["news_addtime"] = substr($row["news_addtime"], 5, 5);
+    $newsArr[$i]["news_img_url"] = $row["news_wap_img_url"];
+    $newsArr[$i]["news_addtime"] = substr($row["news_addtime"], 0, 10);
     //根据伪静态的定义重写转向url
     $newsArr[$i]["news_url"] = "news_show.php?news_id=" . $row["news_id"];
 
@@ -67,7 +67,7 @@ for ($i = ($news_start); (($i < ($news_start + $news_shownum)) & ($i <= $news_su
 						<div class="Img l"><img src="{$newsArr[$i]["news_img_url"]}" onerror="this.src='picture/news.jpg'" /></div>
 						<div class="Cont r">
 							<p class="title">{$news_title_short}</p>
-							<p class="time">发布时间：2018-09-19</p>
+							<p class="time">发布时间：{$newsArr[$i]["news_addtime"]}</p>
 							<p class="con">{$news_summary_short}</p>
 						</div>
                     </a> 
@@ -76,8 +76,9 @@ EOT;
 
 }
 ?>
+            <div class="clear"></div>
 			</ul>
-			<div class="clear"></div>
+			
 <?php
 //分页 向前向后按钮
 $page_max = ceil($news_sum[0] / $page_shownum);

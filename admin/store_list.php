@@ -1,9 +1,9 @@
-<?php 
-include('php/identify.php');
+<?php
+include 'php/identify.php';
 ?>
 <!DOCTYPE html>
 <html>
-  
+
   <head>
     <meta charset="UTF-8">
     <title>page_page</title>
@@ -22,7 +22,7 @@ include('php/identify.php');
       <script src="https://cdn.staticfile.org/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
   </head>
-  
+
   <body>
     <div class="x-nav">
       <span class="layui-breadcrumb">
@@ -34,10 +34,10 @@ include('php/identify.php');
       <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" href="javascript:location.replace(location.href);" title="刷新">
         <i class="layui-icon" style="line-height:30px">ဂ</i></a>
     </div>
-    
+
     <div class="x-body">
-    
-    
+
+
 
 
 
@@ -48,7 +48,7 @@ include('php/identify.php');
 
 
 <script type="text/html" id="switchTpl">
-<?php include_once("php/store/store_checkbox.php");?>
+<?php include_once "php/store/store_checkbox.php";?>
 </script>
 
 
@@ -63,7 +63,7 @@ include('php/identify.php');
 <script src="./lib/layui/layui.js"></script>
 <script>
     layui.use('table', function(){
-        var table = layui.table,form = layui.form;        
+        var table = layui.table,form = layui.form;
         //方法级渲染
         table.render({
             elem: '#LAY_table_user'
@@ -89,15 +89,9 @@ include('php/identify.php');
                  type: "get",
                  data:{"store_id":this.value,"store_show":obj.elem.checked},
                  dataType: "text",
-                 
+                 });
+            });
 
-             });
-
-
-
-  			
-  			});   
-        
         //监听工具条
         table.on('tool(useruv)', function(obj){
             var data = obj.data;
@@ -114,7 +108,7 @@ include('php/identify.php');
                       type: "post",
                       data:{"store_id":data.store_id},
                       dataType: "text",
-                      
+
 
                   });
               });
@@ -164,7 +158,7 @@ include('php/identify.php');
 
     layui.use('laydate', function(){
         var laydate = layui.laydate;
-                
+
         //执行一个laydate实例
         laydate.render({
           elem: '#search_startdate' //指定元素
@@ -174,48 +168,48 @@ include('php/identify.php');
         laydate.render({
           elem: '#search_enddate' //指定元素
         });
-      
+
       });
 
-    
+
 </script>
 
 
-  
+
 </form>
 
 
 
 
-      
-      
-      
-      
-      
 
 
 
 
 
-      
-      
-      
 
- 
 
- 
 
-               
-          
-   
 
-      
-      
-      
-      
-      
-      
-      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   </body>
 
 </html>
