@@ -17,7 +17,6 @@ while ($row = mysqli_fetch_assoc($result)) {
 
 ?>
 
-
   <input type="checkbox" name="show" value="{{d.store_id}}" lay-skin="switch" lay-text="显示|隐藏" lay-filter="showCheckbox" {{ (
 
 <?php
