@@ -1,18 +1,17 @@
 <?php
 include_once("../connect.php");
+
 //待加入对输入值的判断 和非中文的鉴定 重复文件的判断
 
 $product_id=$_GET["product_id"];
 
-$sql = "SELECT * FROM product WHERE product_id='{$product_id}'";
+$sql = "SELECT * FROM cptp_product WHERE product_id='{$product_id}'";
 $sqlfinish = mysqli_query($link,$sql);
 
 while($row=mysqli_fetch_array($sqlfinish)){
     $product_name=$row["product_name"];
-    $product_summary=$row["product_summary"];
     $product_img_url=$row["product_img_url"];
     $product_wap_img_url=$row["product_wap_img_url"];
-
     
 }
 
@@ -107,7 +106,7 @@ mysqli_close($link);
     </script>
 
 <script>
-//点击图片显示大图
+//点击图片显示大图 好像不好使哎
 function DataHtml(name, url) {
     $("#displayimg").attr("src", url);
     var height = $("#displayimg").height();
@@ -155,7 +154,7 @@ function DataHtml(name, url) {
                             <td><div class="layui-input-inline">
                             
                             <div id="divPreview">
-                            <img id="imgHeadPhoto2" src="../../../<?php echo $product_wap_img_url;?>" style="width: 300px; height: 100px; border: solid 1px #d2e2e2;" alt="" />
+                            <img id="imgHeadPhoto2" src="../../../wap/<?php echo $product_wap_img_url;?>" style="width: 300px; height: 100px; border: solid 1px #d2e2e2;" alt="" />
                             </div>
 
                        		<!--file定义输入字段和 "浏览"按钮，供文件上传。-->

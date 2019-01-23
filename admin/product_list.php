@@ -68,9 +68,10 @@ include('php/identify.php');
             ,cols: [[
                 {field:'product_id', title: '产品ID', sort: true, fixed: false,width:100}
                 ,{field:'product_name', title: '产品名称', sort: false, fixed: false,width:180}
-                ,{field:'product_summary', title: '产品简介', sort: false, fixed: false}
-                ,{field:'product_img_url', title: '产品img地址', sort: false, fixed: false}
-                ,{field:'product_show', title:'显示顺序', sort: false, fixed: false,width:100}
+                ,{field:'product_all', title: '产品介绍', sort: false, fixed: false}
+                ,{field:'product_img_url', title: '产品PC配图', sort: false, fixed: false}
+                ,{field:'product_wap_img_url', title:'产品WAP配图', sort: false, fixed: false}
+                ,{field:'product_class', title:'产品分类', sort: false, fixed: false,width:120}
                 ,{field:'right', title: '操作', width:178,align:'center',toolbar:"#barDemo", fixed: 'right',width:300}
             ]]
             ,id: 'testReload'
@@ -102,7 +103,7 @@ include('php/identify.php');
             } else if(obj.event === 'img'){
 
                 var c='php/product/product_img_edit.php?product_id='+data.product_id;
-                x_admin_show('产品图片编辑',c,850,500);
+                x_admin_show('产品图片编辑',c,550,440);
 
 
 

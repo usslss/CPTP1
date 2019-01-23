@@ -20,11 +20,11 @@ if (isset($_GET["limit"])){
 
 
 
-$sqlproduct = "SELECT * FROM product";
+$sqlproduct = "SELECT * FROM cptp_product";
 
 
 //数量
-$sqlsum = "SELECT count(*) FROM product";
+$sqlsum = "SELECT count(*) FROM cptp_product";
 $a = mysqli_query($link,$sqlsum);
 $xx = mysqli_fetch_row($a);
 $sum = $xx[0];
@@ -40,9 +40,10 @@ if ($productlink->num_rows > 0) {
     while(($row = $productlink->fetch_assoc())!=false) {
         if(($i>$list_head)&($i<=$list_bottom)){
             $result="{$result}"."{\"product_id\":".$row["product_id"].",\"product_name\":\"".$row["product_name"]."\",".
-                "\"product_summary\":\"".htmlspecialchars($row["product_summary"])."\",".
+                "\"product_all\":\"".htmlspecialchars($row["product_all"])."\",".
                 "\"product_img_url\":\"".$row["product_img_url"]."\",".
                 "\"product_show\":\"".$row["product_show"]."\",".
+                "\"product_class\":\"".$row["product_class"]."\",".                
                 "\"product_wap_img_url\":\"".$row["product_wap_img_url"]."\"},";
         }
         $i=$i+1;

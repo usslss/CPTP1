@@ -32,6 +32,7 @@ EOT;
         </div>
         <div class="FooterCopy"><?php echo $infoArr[$website]["copyright"]; ?>
             <a href="http://www.miitbeian.gov.cn" target="_blank"><?php echo $infoArr[$website]["mitbeian"]; ?></a>
+            <br>投资有风险,选择需谨慎
         </div>
     </div>
     <div class="Erweima r">
@@ -43,6 +44,7 @@ EOT;
 
 <div class="FooterLink">
     <div class="c1200">
+    
         <div class="l">友情链接：</div>
         <div class="l">
         <?php include_once "link.php";?>

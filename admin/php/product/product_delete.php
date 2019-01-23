@@ -5,7 +5,7 @@ include_once("../connect.php");
 $product_id=$_POST["product_id"];
 
 
-$sql = "DELETE FROM product WHERE product_id = {$product_id}";
+$sql = "DELETE FROM cptp_product WHERE product_id = {$product_id}";
 
 
 $sqlfinish = mysqli_query($link,$sql);
