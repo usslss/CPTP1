@@ -37,6 +37,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     $infoArr[$website]["mitbeian"] = $row["mitbeian"];
     $infoArr[$website]["jmsum"] = $row["jmsum"];
     $infoArr[$website]["53kf"] = $row["wap_53kf"];
+    $infoArr[$website]["53kf_status"] = $row["53kf_status"];
 
 }
 

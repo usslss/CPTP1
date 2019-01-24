@@ -55,6 +55,7 @@ EOT;
 <div class="clear"></div>
 </div>
 <?php 
-//最后记得恢复这里的53客服 
-//echo $infoArr[$website]["53kf"];
+if($infoArr[$website]["53kf_status"]==1){
+echo $infoArr[$website]["53kf"];
+}
 ?>
