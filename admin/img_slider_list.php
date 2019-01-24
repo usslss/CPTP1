@@ -6,7 +6,7 @@ include('php/identify.php');
   
   <head>
     <meta charset="UTF-8">
-    <title>slider_index_list</title>
+    <title>img_slider_list</title>
     <meta name="renderer" content="webkit">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width,user-scalable=yes, minimum-scale=0.4, initial-scale=0.8,target-densitydpi=low-dpi" />
@@ -27,9 +27,9 @@ include('php/identify.php');
     <div class="x-nav">
       <span class="layui-breadcrumb">
         <a target="_parent" href="index.php">首页</a>
-        <a href="">轮播管理</a>
+        <a href="">图片管理</a>
         <a>
-          <cite>主页轮播</cite></a>
+          <cite>头部轮播</cite></a>
       </span>
       <a class="layui-btn layui-btn-small" style="line-height:1.6em;margin-top:3px;float:right" href="javascript:location.replace(location.href);" title="刷新">
         <i class="layui-icon" style="line-height:30px">ဂ</i></a>
@@ -51,9 +51,8 @@ include('php/identify.php');
 
 
 <script type="text/html" id="barDemo">
-    <a class="layui-btn layui-btn-xs " onclick="" lay-event="edit"><i class="layui-icon">&#xe642;</i>文字编辑</a>
-  <?php   //<button class="layui-btn layui-btn-warm layui-btn-xs"  onclick="" lay-event="img"><i class="layui-icon">&#xe642;</i>图片修改</button> ?>
-    <a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="del"><i class="layui-icon">&#xe640;</i>删除</a>
+    <a class="layui-btn layui-btn-xs " onclick="" lay-event="edit"><i class="layui-icon">&#xe642;</i>编辑</a>
+    <!--<a class="layui-btn layui-btn-xs layui-btn-danger" lay-event="del"><i class="layui-icon">&#xe640;</i>删除</a>-->
 </script>
 
 
@@ -64,14 +63,15 @@ include('php/identify.php');
         //方法级渲染
         table.render({
             elem: '#LAY_table_user'
-            ,url: 'php/slider/slider_query.php'
-            ,where: {slider_page: 'index',slider_class: 'rqzd' }    
+            ,url: 'php/img/img_query.php'
+            ,where: {img_page: 'index',img_class: 'banner' }    
             ,cols: [[
-                {field:'slider_id', title: '轮播ID', sort: true, fixed: false,width:100}
-                ,{field:'slider_name', title: '轮播名称', sort: false, fixed: false,width:180}
-                ,{field:'slider_img_url_main', title: '轮播img地址', sort: false, fixed: false}
-                ,{field:'slider_show', title:'显示顺序', sort: false, fixed: false,width:100}
-                ,{field:'right', title: '操作', width:178,align:'center',toolbar:"#barDemo", fixed: 'right',width:300}
+                {field:'id', title: 'ID', sort: true, fixed: false,width:100}
+                ,{field:'name', title: '名称', sort: false, fixed: false}   
+                ,{field:'class', title: '图片类别', sort: false, fixed: false}               
+                ,{field:'url', title: 'img地址', sort: false, fixed: false}       
+                ,{field:'wap_url', title: '移动端img地址', sort: false, fixed: false}           
+                ,{field:'right', title: '操作', width:178,align:'center',toolbar:"#barDemo", fixed: 'right',width:100}
             ]]
             ,id: 'testReload'
             ,page: true
@@ -83,24 +83,24 @@ include('php/identify.php');
         table.on('tool(useruv)', function(obj){
             var data = obj.data;
             if(obj.event === 'edit'){
-                var c='php/slider/slider_edit.php?slider_id='+data.slider_id;
-                x_admin_show('轮播信息编辑',c,850,400);
+                var c='php/img/img_edit.php?id='+data.id;
+                x_admin_show('图片编辑',c,600,385);
             } else if(obj.event === 'del'){
-                layer.confirm('确定删除这条轮播?', function(index){
+                layer.confirm('确定删除这个图片?', function(index){
               	  console.log(data);
                   obj.del();
                   layer.close(index);
                   $.ajax({
-                      url: "php/slider/slider_delete.php",
+                      url: "php/img/img_delete.php",
                       type: "post",
-                      data:{"slider_id":data.slider_id},
+                      data:{"id":data.id},
                       dataType: "text",
                   });
               });
             } else if(obj.event === 'img'){
 
-                var c='php/slider/slider_img_edit.php?slider_id='+data.slider_id;
-                x_admin_show('轮播图片编辑',c,850,500);
+                var c='php/img/img_edit.php?id='+data.id;
+                x_admin_show('暂时不用这个',c,850,500);
 
 
 

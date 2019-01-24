@@ -120,21 +120,15 @@ include('php/identify.php');
                 </a>
                 <ul class="sub-menu">
                     <li>
-                        <a _href="slider_index_list.php">
+                        <a _href="img_slider_list.php">
                             <i class="iconfont">&#xe6a7;</i>
-                            <cite>主页轮播</cite>
+                            <cite>头部轮播</cite>
                         </a>
                     </li >
                     <li>
-                        <a _href="slider_product_list.php">
+                        <a _href="img_list.php">
                             <i class="iconfont">&#xe6a7;</i>
-                            <cite>产品页轮播</cite>
-                        </a>
-                    </li >
-                    <li>
-                        <a _href="slider_store_list.php">
-                            <i class="iconfont">&#xe6a7;</i>
-                            <cite>门店页轮播</cite>
+                            <cite>其他图片</cite>
                         </a>
                     </li >
                 </ul>
