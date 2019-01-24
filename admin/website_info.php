@@ -68,7 +68,7 @@ include 'php/identify.php';
             ,cols: [[
                 {field:'id', title: '网站ID', sort: true, fixed: false,width:100}
                 ,{field:'website', title: '网站名称', sort: false, fixed: false,width:130}
-                ,{field:'tel', title: '联系电话', sort: false, fixed: false,width:130}
+                ,{field:'tel', title: '加盟热线', sort: false, fixed: false,width:130}
                 ,{field:'email', title: '电子邮箱', sort: false, fixed: false,width:130}
                 ,{field:'address', title: '地址', sort: false, fixed: false}
                 ,{field:'copyright', title: '版权声明', sort: false, fixed: false}
@@ -95,30 +95,9 @@ include 'php/identify.php';
         table.on('tool(useruv)', function(obj){
             var data = obj.data;
             if(obj.event === 'edit'){
-                var c='php/product/product_edit.php?product_id='+data.product_id;
-                x_admin_show('文本编辑',c,850,450);
-            } else if(obj.event === 'del'){
-                layer.confirm('确定删除这条产品信息?', function(index){
-              	  console.log(data);
-                  obj.del();
-                  layer.close(index);
-                  $.ajax({
-                      url: "php/product/product_delete.php",
-                      type: "post",
-                      data:{"product_id":data.product_id},
-                      dataType: "text",
-
-
-                  });
-              });
-            } else if(obj.event === 'img'){
-
-                var c='php/product/product_img_edit.php?product_id='+data.product_id;
-                x_admin_show('产品图片编辑',c,850,500);
-
-
-
-            }
+                var c='php/website/website_info_edit.php?id='+data.id;
+                x_admin_show('网站信息编辑',c,595,580);
+            } 
         });
 
         $('.demoTable .layui-btn').on('click', function(){
