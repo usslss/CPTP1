@@ -22,7 +22,7 @@ $i = 0;
 while (($row = mysqli_fetch_assoc($result)) & ($i <= $problem_shownum)) {
     $problemArr[$i]["problem_id"] = $row["id"];
     $problemArr[$i]["problem_title"] = $row["title"];
-    $problemArr[$i]["problem_summary"] = $row["summary"];
+    $problemArr[$i]["problem_summary"] = mb_substr(htmlspecialchars($row["summary"]),0,40,'utf-8');
     $problemArr[$i]["problem_img_url"] = $row["wap_img_url"];
     $problemArr[$i]["problem_addtime"] = substr($row["addtime"], 5, 5);
     //根据伪静态的定义重写转向url

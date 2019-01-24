@@ -26,7 +26,7 @@ if ($qaq_sum[0] < $qaq_shownum) {
     $qaq_shownum = $qaq_sum[0];
 }
 
-$sql_qaq = "SELECT * FROM cptp_others WHERE class='$qaq_class' AND website='{$website}' ORDER BY addtime ";
+$sql_qaq = "SELECT * FROM cptp_others WHERE class='$qaq_class' AND website='{$website}' ORDER BY addtime DESC ";
 
 $result = mysqli_query($link, $sql_qaq);
 $i = 1;
@@ -81,20 +81,20 @@ $page_max = ceil($qaq_sum[0] / $page_shownum);
 			<div class="pages">
 				<div id="pages">
 					<a>共<?php echo $qaq_sum[0]; ?>条</a>
-					<a href="<?php echo "qaq.php?class=" . $showqaqClass . "&page=1"; ?>">首页</a>
+					<a href="<?php echo "qaq.php?page=1"; ?>">首页</a>
 <?php
 for ($i = 1; $i <= $page_max; $i++) {
     if ($i == $page_jump) {
         echo '<span>' . $i . '</span>';
     } else {
         echo <<< EOT
-										<a href="qaq.php?class=$showqaqClass&page=$i">$i</a>
+										<a href="qaq.php?page=$i">$i</a>
 
 EOT;
     }
 }
 ?>
-						<a href="<?php echo "qaq.php?class=" . $showqaqClass . "&page=" . $page_max; ?>">尾页</a>
+						<a href="<?php echo "qaq.php?page=" . $page_max; ?>">尾页</a>
 				</div>
 			</div>
 			<div class="clear"></div>

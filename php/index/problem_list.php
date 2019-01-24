@@ -26,7 +26,7 @@ while (($row = mysqli_fetch_assoc($result)) & ($i <= $problem_shownum)) {
     $problemArr[$i]["problem_img_url"] = $row["img_url"];
     $problemArr[$i]["problem_addtime"] = substr($row["addtime"], 5, 5);
     ////////////////////////////////根据伪静态的定义重写转向url
-    $problemArr[$i]["problem_url"] = "qaq_show.php?problem_id=" . $row["id"];
+    $problemArr[$i]["problem_url"] = "qaq_show.php?qaq_id=" . $row["id"];
 
     $i++;
 }

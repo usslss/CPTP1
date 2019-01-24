@@ -171,7 +171,21 @@ include('php/identify.php');
                     </li >
                 </ul>
             </li>
-            
+            <li>
+                <a href="javascript:;">
+                    <i class="iconfont">&#xe6fb;</i>
+                    <cite>qaq管理</cite>
+                    <i class="iconfont nav_right">&#xe697;</i>
+                </a>
+                <ul class="sub-menu">
+                    <li>
+                        <a _href="qaq_list.php">
+                            <i class="iconfont">&#xe6a7;</i>
+                            <cite>qaq列表</cite>
+                        </a>
+                    </li >
+                </ul>
+            </li>            
  
 
             <li>

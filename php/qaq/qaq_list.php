@@ -25,7 +25,7 @@ if ($qaq_sum[0] < $qaq_shownum) {
 }
 
 
-$sql_qaq = "SELECT * FROM cptp_others WHERE class='{$qaq_class}' AND website='{$website}' ORDER BY addtime ";
+$sql_qaq = "SELECT * FROM cptp_others WHERE class='{$qaq_class}' AND website='{$website}' ORDER BY addtime DESC";
 
 
 $result = mysqli_query($link, $sql_qaq);
