@@ -72,7 +72,7 @@ include('php/identify.php');
                         </a>
                     </li >
                     <li>
-                        <a _href="product_list.php">
+                        <a _href="nav_list.php">
                             <i class="iconfont">&#xe6a7;</i>
                             <cite>头部导航</cite>
                         </a>
