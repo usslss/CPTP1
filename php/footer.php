@@ -27,18 +27,14 @@ EOT;
 ?>
         </div>
         <div class="FooterContact">
-            <p>加盟热线：<?php echo $infoArr[$website]["tel"]; ?>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;官方邮箱：<?php echo $infoArr[$website]["email"]; ?></p>
             <p>总部地址：<?php echo $infoArr[$website]["address"]; ?></p>
         </div>
         <div class="FooterCopy"><?php echo $infoArr[$website]["copyright"]; ?>
-            <a href="http://www.miitbeian.gov.cn" target="_blank"><?php echo $infoArr[$website]["mitbeian"]; ?></a>
+            <a href="http://www.miitbeian.gov.cn            nk"><?php echo $infoArr[$website]["mitbeian"]; ?></a>
             <br>投资有风险,选择需谨慎
         </div>
     </div>
-    <div class="Erweima r">
-        <img src="picture/erweima.jpg" width="120px" height="120px" />
-        <p>扫一扫关注<?php echo $website; ?></p>
-    </div>
+
     <div class="clear"></div>
 </div>
 
@@ -47,7 +43,9 @@ EOT;
     
         <div class="l">友情链接：</div>
         <div class="l">
+        <h6>
         <?php include_once "link.php";?>
+        </h6>
         </div>
         <div class="clear"></div>
     </div>

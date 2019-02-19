@@ -32,11 +32,6 @@ $page = "about";
 			<div class="PageLeft l">
 				<?php include_once "php/pageNav.php";?>
 				<?php include_once "php/pageRecommend.php";?>
-				<div class="PageContact">
-					<div class="title">咨询热线</div>
-					<div class="tel"><?php echo $infoArr[$website]["tel"]; ?></div>
-					<div class="mailbox">邮箱：<?php echo $infoArr[$website]["email"]; ?></div>
-				</div>
 			</div>
 			<div class="PageRight r">
 				<div class="Top">

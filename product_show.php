@@ -21,7 +21,7 @@ while ($row=mysqli_fetch_assoc($result)){
     $show_product_all=$row["product_all"];
     $show_product_addtime=substr($row["product_addtime"],0,20);
 	//伪静态?
-	$show_product_url="product_show.php?product_id=".$product_id;
+	$show_product_url='http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 }
 
 
@@ -110,11 +110,6 @@ if ((isset($next_product_id)==false)){
 			<div class="PageLeft l">
 			<?php include_once "php/pageNav.php";?>
 				<?php include_once "php/pageRecommend.php";?>
-				<div class="PageContact">
-					<div class="title">咨询热线</div>
-					<div class="tel"><?php echo $infoArr[$website]["tel"]; ?></div>
-					<div class="mailbox">邮箱：<?php echo $infoArr[$website]["email"]; ?></div>
-				</div>
 			</div>
 			<div class="PageRight r">
 				<div class="Top">

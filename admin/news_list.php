@@ -1,30 +1,6 @@
 <?php
 include('php/identify.php');
 
-//获取关键词的页面和网站属性
-$sql_getclass="SELECT news_class FROM news";
-
-$result1=mysqli_query($link, $sql_getclass);
-
-
-$i=0;
-while ($row=mysqli_fetch_assoc($result1)){
-    $quchong[$i]=$row["news_class"];
-    $i++;
-}
-
-$i=0;
-foreach (array_unique($quchong) as $id => $news_class) {
-    $newsarr[$i]["news_class"] = $news_class;
-    $i++;
-}
-$newsclass_sum=$i;
-
-
-
-
-
-
 ?>
 <!DOCTYPE html>
 <html>

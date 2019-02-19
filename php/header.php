@@ -10,6 +10,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     $navArr[$i]["name"] = $row["name"];
     $navArr[$i]["page"] = $row["page"];
     $navArr[$i]["url"] = $row["url"];
+
     if ($row["page"] == $page) {
         $navArr[$i]["class"] = "on";
         $pageUrl=$row["url"];
@@ -20,7 +21,7 @@ while ($row = mysqli_fetch_assoc($result)) {
     $i++;
 
 }
-$navArr[0]["class"] = "";
+//$navArr[0]["class"] = "";
 $nav_sum = $i;
 
 //网站信息获取
@@ -68,24 +69,24 @@ while ($row = mysqli_fetch_assoc($result)) {
 					<div class="HeaderLogo l">
 						<a href="<?php echo $navArr[0]["url"]; ?>"></a>
 					</div>
-					<div class="HeaderTel r">
-						<p>加盟热线</p><span><?php echo $infoArr[$website]["tel"]; ?></span></div>
-				</div>
-			</div>
-			<div class="HeaderNav">
-				<ul>
+					<div class="HeaderNav">
+						<ul>
 				<?php
 for ($i = 0; $i < $nav_sum; $i++) {
     //如果对标题的长度有限制
     echo <<< EOT
-					<li class={$navArr[$i]["class"]}>
-						<a href="{$navArr[$i]["url"]}">{$navArr[$i]["name"]}</a>
-					</li>
+                            <li class={$navArr[$i]["class"]}>
+                                <a href="{$navArr[$i]["url"]}">{$navArr[$i]["name"]}</a>
+                            </li>
 EOT;
 }
 ?>
-
-				</ul>
+						</ul>
+					</div>
+				</div>
 			</div>
+
 			<div class="clear"></div>
 		</div>
+
+        

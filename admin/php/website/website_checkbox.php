@@ -2,7 +2,7 @@
 
 include_once "php/connect.php";
 
-$sql_switch = "SELECT * FROM cptp_info WHERE website='雾社茶町'";
+$sql_switch = "SELECT * FROM cptp_info WHERE website='$website'";
 $result = mysqli_query($link, $sql_switch);
 
 while ($row = mysqli_fetch_assoc($result)) {

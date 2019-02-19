@@ -19,17 +19,8 @@
 			<div class="floatCont">
 				<div class="tltle l">
 					<div class="img"></div>
-					<div class="con">
-						<p><?php echo $website; ?>加盟招商会</p>
-						<span>登记预约将在24小时内回电确认并发资料<br/>加盟咨询热线<i><?php echo $infoArr[$website]["tel"]; ?></i></span>
-					</div>
 				</div>
-				<div class="erweima r">
-					<img src="picture/erweima.jpg" width="120px" height="120px" />
-					<p>扫<br/>码<br/>关<br/>注<br/>我<br/>们</p>
-				</div>
-				<div class="floatForm r" id="demand">
-					<div class="top">今日已有<span><?php echo $infoArr[$website]["jmsum"]; ?></span>人获得<?php echo $website; ?>招商资料</div>
+				<div class="floatForm r" id="demand">				
 					<form id="msgform">
 						<div class="row l">
 							<input type="text" class="txt" name="username_h" placeholder="填写您的姓名">

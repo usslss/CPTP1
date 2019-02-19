@@ -38,7 +38,7 @@ while (($row = mysqli_fetch_assoc($result)) & ($i <= $problem_shownum)) {
 			<div class="ProblemList">
 				<ul>
 <?php
-$problem_shownum--;
+
 for ($i = 0; $i < $problem_shownum;) {
     //如果对标题的长度有限制
     $problem_title_short = mb_substr($problemArr[$i]["problem_title"], 0, 14, 'utf-8');

@@ -6,12 +6,12 @@ if(!isset($_SESSION['userid'])){
     header("Location:login.html");
     exit();
 }
-$website="雾社茶町";
+$website="恩茶";
 //包含数据库连接文件
 $host="localhost";
 $db_user="root";
 $db_pass="";
-$db_name="joinstarbucks";
+$db_name="encha";
 $timezone="Asia/Shanghai";
 $admin_name=$_SESSION['username'];
 $link=mysqli_connect($host,$db_user,$db_pass);//连接数据库主机

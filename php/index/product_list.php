@@ -38,7 +38,7 @@ while (($row=mysqli_fetch_assoc($result))&($i<=$product_shownum)){
 			<div class="ProductList">
 				<ul>
 <?php
-$product_shownum--;
+
 for ($i=0;$i<$product_shownum;){
     //如果对标题的长度有限制
     //$product_title_short=mb_substr($productarr[$i]["product_title"],0,22,'utf-8');

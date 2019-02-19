@@ -21,7 +21,7 @@ while ($row=mysqli_fetch_assoc($result)){
     $show_qaq_all=$row["text_all"];
     $show_qaq_addtime=substr($row["addtime"],0,20);
 	//伪静态?
-	$show_qaq_url="qaq_show.php?qaq_id=".$qaq_id;
+	$show_qaq_url='http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 }
 
 //页面导航元素
@@ -113,11 +113,6 @@ if ((isset($next_qaq_id)==false)){
 			<div class="PageLeft l">
 			<?php include_once "php/pageNav.php";?>
 				<?php include_once "php/pageRecommend.php";?>
-				<div class="PageContact">
-					<div class="title">咨询热线</div>
-					<div class="tel"><?php echo $infoArr[$website]["tel"]; ?></div>
-					<div class="mailbox">邮箱：<?php echo $infoArr[$website]["email"]; ?></div>
-				</div>
 			</div>
 			<div class="PageRight r">
 				<div class="Top">

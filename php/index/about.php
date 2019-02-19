@@ -1,15 +1,17 @@
 <?php
-$module_class = "index_about";
 
-$sql_about = "SELECT * FROM cptp_others JOIN cptp_img ON cptp_others.class=cptp_img.class WHERE cptp_others.class='$module_class' AND cptp_others.website='$website'";
-$result = mysqli_query($link, $sql_about);
+$sql_about_img = "SELECT * FROM cptp_img  WHERE class='index_about' AND website='$website'";
+$result = mysqli_query($link, $sql_about_img);
 
 while ($row = mysqli_fetch_assoc($result)) {
 	$about["img_url"] = $row["url"];
-	$about["text_all"] = $row["text_all"];
+}
 
-    //根据伪静态的定义重写转向url
-    //$imgArr[$i]["img_href"] = "news_show.php?news_id=".$row["news_id"];
+$sql_about_text = "SELECT * FROM cptp_others  WHERE class='index_text' AND website='$website'";
+$result = mysqli_query($link, $sql_about_text);
+
+while ($row = mysqli_fetch_assoc($result)) {
+	$about["text_all"] = $row["text_all"];
 }
 
 ?>

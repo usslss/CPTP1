@@ -3,13 +3,13 @@ include_once("connect.php");
 include('identify.php');
 $news_click_all=0;
 
-$sql = "SELECT count(*) FROM store";
+$sql = "SELECT count(*) FROM cptp_news";
 $sqlfinish = mysqli_query($link,$sql);
 while($row=mysqli_fetch_array($sqlfinish)){
-    $store_sum=$row["count(*)"]; 
+    $news_sum=$row["count(*)"]; 
 }
 
-$sql = "SELECT count(*) FROM product";
+$sql = "SELECT count(*) FROM cptp_product";
 $sqlfinish = mysqli_query($link,$sql);
 while($row=mysqli_fetch_array($sqlfinish)){
     $product_sum=$row["count(*)"];
@@ -66,9 +66,9 @@ mysqli_close($link);
                                         </li>
                                         <li class="layui-col-xs2">
                                             <a href="javascript:;" class="x-admin-backlog-body">
-                                                <h3>门店数</h3>
+                                                <h3>新闻数</h3>
                                                 <p>
-                                                    <cite><?php echo $store_sum;?></cite></p>
+                                                    <cite><?php echo $news_sum;?></cite></p>
                                             </a>
                                         </li>
                                         <li class="layui-col-xs2">

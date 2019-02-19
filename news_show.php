@@ -22,7 +22,7 @@ while ($row=mysqli_fetch_assoc($result)){
     $show_news_all=$row["news_all"];
     $show_news_addtime=substr($row["news_addtime"],0,20);
 	//伪静态?
-	$show_news_url="news_show.php?news_id=".$news_id;
+	$show_news_url='http://'.$_SERVER['HTTP_HOST'].$_SERVER['REQUEST_URI'];
 }
 
 
@@ -111,11 +111,6 @@ if ((isset($next_news_id)==false)){
 			<div class="PageLeft l">
 			<?php include_once "php/pageNav.php";?>
 				<?php include_once "php/pageRecommend.php";?>
-				<div class="PageContact">
-					<div class="title">咨询热线</div>
-					<div class="tel"><?php echo $infoArr[$website]["tel"]; ?></div>
-					<div class="mailbox">邮箱：<?php echo $infoArr[$website]["email"]; ?></div>
-				</div>
 			</div>
 			<div class="PageRight r">
 				<div class="Top">
