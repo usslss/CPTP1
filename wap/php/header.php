@@ -42,25 +42,12 @@ while ($row = mysqli_fetch_assoc($result)) {
 }
 
 ?>
-<!-- 移动适配JS脚本 -->
+<!-- WAPtoPC 适配JS脚本 -->
 <!--
-	<script type="text/javascript">
-    if (window.location.toString().indexOf('pref=padindex') != -1) {
-    } else {
-        if (/AppleWebKit.*Mobile/i.test(navigator.userAgent) || /\(Android.*Mobile.+\).+Gecko.+Firefox/i.test(navigator.userAgent) || (/MIDP|SymbianOS|NOKIA|SAMSUNG|LG|NEC|TCL|Alcatel|BIRD|DBTEL|Dopod|PHILIPS|HAIER|LENOVO|MOT-|Nokia|SonyEricsson|SIE-|Amoi|ZTE/.test(navigator.userAgent))) {
-            if (window.location.href.indexOf("?mobile")<0){
-                try {
-                    if (/Android|Windows Phone|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
-                        window.location.href="/wap/<?php echo $page; ?>";
-                    } else if (/iPad/i.test(navigator.userAgent)) {
-                        //window.location.href="/wap/"
-                    } else {
-                        window.location.href="/wap/<?php echo $page; ?>"
-                    }
-                } catch (e) {}
-            }
-        }
-    }
+    if(!(/(android|iphone|ipad|PlayBook|BB10)/i).test(window.navigator.userAgent)){
+        window.location.href = 'http://www.qlhht.com/';
+     }
+
 </script>
  -->
  <nav class="cbp-spmenu cbp-spmenu-right" id="cbp-right">
